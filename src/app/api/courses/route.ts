@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { authenticateUser } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
+import { normalizeThumbnail } from '@/lib/thumbnail';
 
 const courseInclude = {
   instructor: { select: { id: true, name: true, title: true, avatar: true, isAvailableForCall: true, locale: true, currency: true } },
@@ -52,7 +53,7 @@ const shapeCourseResponse = (course: any, privileged = false) => ({
   enrolledStudents: course.enrolledStudents || [],
   isFree: course.isFree,
   modules: privileged ? course.modules || [] : sanitizeModules(course.modules || []),
-  thumbnail: course.thumbnail || '/images/course-default.jpg',
+  thumbnail: normalizeThumbnail(course.thumbnail),
   level: course.level || 'Beginner',
   duration: course.duration || '0 hours',
   progress: 0,

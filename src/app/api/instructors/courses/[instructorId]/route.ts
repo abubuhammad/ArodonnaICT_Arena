@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { authenticateUser } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
+import { normalizeThumbnail } from '@/lib/thumbnail';
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ instructorId: string }> }) {
   try {
@@ -13,7 +14,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       description: course.description,
       price: Number(course.price),
       isFree: course.isFree,
-      thumbnail: course.thumbnail || '/images/course-default.jpg',
+      thumbnail: normalizeThumbnail(course.thumbnail),
       duration: course.duration || '0 hours',
       level: course.level || 'Beginner',
       instructor: instructorId,
