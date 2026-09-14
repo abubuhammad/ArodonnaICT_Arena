@@ -188,15 +188,20 @@ export async function submitFinalAssessment(enrollmentId: string, userId: string
   const passed = score >= passingScore;
   return prisma.$transaction(async (tx) => {
     const updated = await tx.enrollment.update({ where: { id: enrollmentId }, data: { finalAssessmentPassed: passed, finalScore: score, status: passed ? 'COMPLETED' : enrollment.status } });
-    let certificate = null;
+    let certificate: { id: string; serial: string; issuedAt: Date; fileUrl: string; downloadUrl: string } | null = null;
     if (passed) {
       const existing = await tx.certificate.findFirst({ where: { enrollmentId } });
-      if (existing) certificate = existing;
-      else {
+      if (existing) {
+        const downloadUrl = `${process.env.CERTIFICATE_BASE_URL || 'http://localhost:5000/api/certificates'}/${existing.id}/download`;
+        certificate = { ...existing, downloadUrl, fileUrl: existing.fileUrl || downloadUrl };
+      } else {
         const id = randomUUID();
         const fileUrl = `${process.env.CERTIFICATE_BASE_URL || 'http://localhost:5000/api/certificates'}/${id}/download`;
-        certificate = await tx.certificate.create({ data: { id, enrollmentId, serial: id, fileUrl, issuedAt: new Date(), metadata: { template: enrollment.course.instructor.certificateTemplate || null } } });
-        await tx.enrollment.update({ where: { id: enrollmentId }, data: { certificate: { id, issuedAt: certificate.issuedAt, downloadUrl: fileUrl } } });
+        const createdCertificate = await tx.certificate.create({
+          data: { id, enrollmentId, serial: id, fileUrl, issuedAt: new Date(), metadata: { template: enrollment.course.instructor.certificateTemplate || null } },
+        });
+        certificate = { ...createdCertificate, downloadUrl: fileUrl };
+        await tx.enrollment.update({ where: { id: enrollmentId }, data: { certificate: { id, issuedAt: createdCertificate.issuedAt, downloadUrl: fileUrl } } });
       }
     }
     return { passed, score, passingScore, status: updated.status, certificate };

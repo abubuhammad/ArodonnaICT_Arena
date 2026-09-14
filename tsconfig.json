@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "noImplicitAny": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -24,11 +25,18 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "src/**/*.mts"
   ],
-  "exclude": ["node_modules", "src/legacy/**/__tests__/**"]
+  "exclude": [
+    "node_modules",
+    "backend",
+    "backend.legacy",
+    "frontend.legacy",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
 }

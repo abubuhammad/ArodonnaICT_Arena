@@ -73,10 +73,12 @@ const UsersTable: React.FC<UsersTableProps> = ({
             <div className="hidden md:block">
               <table className="w-full text-sm">
                 <thead className="bg-slate-50 dark:bg-slate-900/60 text-slate-600 dark:text-slate-300">
+                  <tr>
                     <th className="px-4 py-3 text-left">Name</th>
-                      <th className="px-4 py-3 text-left">Email</th>
-                      <th className="px-4 py-3 text-left">Role</th>
-                      <th className="px-4 py-3 text-right">Actions</th>
+                    <th className="px-4 py-3 text-left">Email</th>
+                    <th className="px-4 py-3 text-left">Role</th>
+                    <th className="px-4 py-3 text-right">Actions</th>
+                  </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200 dark:divide-slate-800 bg-white dark:bg-slate-950">
                   {users.map((user) => (

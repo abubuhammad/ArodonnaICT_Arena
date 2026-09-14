@@ -40,15 +40,18 @@ const AdminAuditLogs: React.FC = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800 bg-white dark:bg-slate-950">
-              {items.map((log) => (
-                <tr key={log._id} className="hover:bg-slate-50 dark:hover:bg-slate-900">
-                  <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.createdAt ? new Date(log.createdAt).toLocaleString() : '—'}</td>
-                  <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.actorRole ? `${log.actorRole} (${log.actorId || '—'})` : (log.actorId || 'System')}</td>
-                  <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.actionType}</td>
-                  <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.resourceType}{log.resourceId ? ` (${log.resourceId})` : ''}</td>
-                  <td className="px-3 py-2 text-slate-600 dark:text-slate-300 break-words max-w-lg">{typeof log.details === 'object' ? JSON.stringify(log.details) : String(log.details)}</td>
-                </tr>
-              ))}
+              {items.map((log, index) => {
+                const key = log._id || `${log.actionType}-${log.resourceType}-${log.createdAt || 'unknown'}-${index}`;
+                return (
+                  <tr key={key} className="hover:bg-slate-50 dark:hover:bg-slate-900">
+                    <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.createdAt ? new Date(log.createdAt).toLocaleString() : '—'}</td>
+                    <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.actorRole ? `${log.actorRole} (${log.actorId || '—'})` : (log.actorId || 'System')}</td>
+                    <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.actionType}</td>
+                    <td className="px-3 py-2 text-slate-600 dark:text-slate-300">{log.resourceType}{log.resourceId ? ` (${log.resourceId})` : ''}</td>
+                    <td className="px-3 py-2 text-slate-600 dark:text-slate-300 break-words max-w-lg">{typeof log.details === 'object' ? JSON.stringify(log.details) : String(log.details)}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
