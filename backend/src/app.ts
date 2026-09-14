@@ -25,10 +25,15 @@ const allowedOrigins = [
   "http://127.0.0.1:3001",
 ];
 
+const isAllowedOrigin = (origin: string) =>
+  allowedOrigins.includes(origin) ||
+  origin === process.env.FRONTEND_URL ||
+  origin.endsWith(".vercel.app");
+
 app.use(cors({ 
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) return callback(null, true);
+    if (isAllowedOrigin(origin)) return callback(null, true);
     return callback(new Error('Not allowed by CORS'));
   },
   credentials: true,
