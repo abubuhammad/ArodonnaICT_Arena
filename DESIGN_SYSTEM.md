@@ -151,3 +151,12 @@ Use `ErrorMessage` for page or request failures:
 - include a concise title and the actionable error message
 
 Inline field errors should sit below the field in `text-sm text-red-600`; reserve the full error panel for request or page-level failures.
+
+## Anti-patterns to avoid
+
+These are recognizable generic-template tells, not flexible rules of thumb. Do not preserve them when modernizing a page.
+
+- **Unrelated content blocks rendered as identical cards:** A mission statement, value list, and feature list are different content structures. Rendering each as the same white rounded card with a thin border and identical shadow makes the page feel assembled from a generic template. If a page does this for three or more distinct sections, break up the repetition with hierarchy, full-width bands, editorial spacing, or a genuinely different treatment.
+- **Tracked-out all-caps eyebrow labels:** Labels such as `A PRACTICAL PATH FORWARD` are decorative when they add no information. Remove them rather than adding letter spacing and uppercase styling above every heading. Use a short contextual label only when it communicates real metadata, such as a role, status, or section category.
+- **Numbered markers without sequence:** Do not add `01`, `02`, or `03` to content that is not an actual sequence, process, or ordered set. Numbers imply progression and create false structure when the content is simply grouped information.
+- **Cards for unrelated content:** Cards and list items are appropriate for repeating collections of like items, including course listings, table rows, status records, and stat tiles. They are not a default wrapper for arbitrary unrelated sections. Use cards when the content benefits from repeated comparison or a clear tool boundary; otherwise use unframed sections and full-width bands.
