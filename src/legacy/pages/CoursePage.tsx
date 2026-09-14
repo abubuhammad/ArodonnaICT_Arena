@@ -137,15 +137,18 @@ const CoursePage: React.FC = () => {
           fullCourseData: courseResponse.data
         });
         
-        // Validate course data
-        if (!courseResponse.data || !courseResponse.data.instructor) {
-          throw new Error("Invalid course data: instructor information is missing");
-        }
-        
         console.log("Course data received:", courseResponse.data);
 
         const normalizedCourse = {
           ...courseResponse.data,
+          instructor: courseResponse.data?.instructor && typeof courseResponse.data.instructor === "object"
+            ? courseResponse.data.instructor
+            : {
+                _id: "unknown",
+                name: typeof courseResponse.data?.instructor === "string" ? courseResponse.data.instructor : "Arodonna ICT Arena",
+                title: "Course Instructor",
+                avatar: "/images/default-avatar.png",
+              },
           modules: (courseResponse.data.modules || []).map((module: any) => ({
             ...module,
             _id: module._id || module.id,
