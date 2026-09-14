@@ -50,34 +50,39 @@ const AboutPage: React.FC = () => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="mx-auto max-w-3xl text-center"
+            className="grid gap-8 border-b border-slate-200 pb-16 dark:border-slate-800 lg:grid-cols-[1.3fr_0.7fr] lg:items-end"
           >
-            <p className="mb-3 text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">A practical path forward</p>
-            <h1 className="text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">About Arodonna ICT Arena</h1>
-            <p className="mt-4 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Empowering learners worldwide with practical tech education and meaningful career outcomes.</p>
+            <div>
+              <p className="text-sm font-medium leading-5 text-indigo-600 dark:text-indigo-400">About Arodonna ICT Arena</p>
+              <h1 className="mt-4 max-w-4xl text-5xl font-bold leading-tight text-slate-950 dark:text-slate-50 sm:text-6xl">Practical, industry-aligned tech education.</h1>
+            </div>
+            <p className="max-w-md text-base font-normal leading-6 text-slate-600 dark:text-slate-400 lg:justify-self-end">We help learners build the skills employers need, with meaningful career outcomes as the goal.</p>
           </motion.header>
 
-          <section aria-labelledby="mission" className="space-y-8">
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <h2 id="mission" className="text-2xl font-bold leading-8 text-indigo-600 dark:text-indigo-400">Our Mission</h2>
-              <p className="mt-3 max-w-3xl text-base font-normal leading-6 text-slate-600 dark:text-slate-400">We provide practical, industry-aligned tech education that helps learners build skills employers need. Our goal is to make that education accessible, affordable, and relevant.</p>
+          <section aria-labelledby="mission" className="border-b border-slate-200 py-8 dark:border-slate-800">
+            <div className="max-w-5xl">
+              <h2 id="mission" className="text-2xl font-bold leading-8 text-indigo-600 dark:text-indigo-400">Our mission</h2>
+              <p className="mt-6 text-3xl font-semibold leading-tight text-slate-950 dark:text-slate-50 sm:text-4xl">“We make practical tech education accessible, affordable, and relevant for the skills employers need.”</p>
             </div>
+          </section>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Our Vision</h3>
-                <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">To be the go-to platform for learners and instructors who want measurable career impact through practical learning experiences.</p>
-              </div>
-              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Who We Serve</h3>
-                <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Students seeking career transitions, self-learners looking to upskill, and instructors aiming to reach a global audience.</p>
-              </div>
+          <section className="grid gap-8 border-b border-slate-200 py-8 dark:border-slate-800 md:grid-cols-2">
+            <div>
+              <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Our vision</h2>
+              <p className="mt-3 max-w-xl text-base font-normal leading-6 text-slate-600 dark:text-slate-400">To be the go-to platform for learners and instructors who want measurable career impact through practical learning experiences.</p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Who we serve</h2>
+              <p className="mt-3 max-w-xl text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Students seeking career transitions, self-learners looking to upskill, and instructors aiming to reach a global audience.</p>
             </div>
           </section>
 
           <section aria-labelledby="values">
-            <h2 id="values" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Our Core Values</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="flex flex-col gap-3 border-b border-slate-200 pb-6 dark:border-slate-800 sm:flex-row sm:items-end sm:justify-between">
+              <h2 id="values" className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Our core values</h2>
+              <p className="max-w-sm text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">The principles behind how we teach, build, and support the learning community.</p>
+            </div>
+            <div className="divide-y divide-slate-200 dark:divide-slate-800">
               {[
                 { title: 'Excellence', text: 'High-quality content and instructors.' },
                 { title: 'Accessibility', text: 'Affordable education for every learner.' },
@@ -86,23 +91,25 @@ const AboutPage: React.FC = () => {
                 { title: 'Integrity', text: 'Transparent and fair policies.' },
                 { title: 'Empowerment', text: 'Tools that help learners succeed.' },
               ].map((v, i) => (
-                <motion.div key={v.title} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05, duration: 0.35 }} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                <motion.div key={v.title} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05, duration: 0.35 }} className="grid gap-2 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6">
                   <h3 className="text-lg font-semibold leading-7 text-indigo-600 dark:text-indigo-400">{v.title}</h3>
-                  <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">{v.text}</p>
+                  <p className="text-base font-normal leading-6 text-slate-600 dark:text-slate-400">{v.text}</p>
                 </motion.div>
               ))}
             </div>
           </section>
 
           <section aria-labelledby="why">
-            <h2 id="why" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Why Choose Us</h2>
-            <div className="rounded-xl border border-cyan-200 bg-cyan-50/70 p-6 dark:border-cyan-900/60 dark:bg-cyan-950/20">
-              <ul className="grid gap-6 md:grid-cols-2">
-                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Expert instructors with real-world experience</span></li>
-                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Hands-on projects and portfolios</span></li>
-                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Certificates and career support</span></li>
-                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Flexible learning and lifetime access</span></li>
-              </ul>
+            <div className="bg-indigo-600 px-6 py-10 text-white dark:bg-indigo-500 sm:px-10">
+              <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+                <h2 id="why" className="text-2xl font-bold leading-8">Why choose us</h2>
+                <ul className="grid gap-4 sm:grid-cols-2">
+                  <li className="flex items-start gap-3 text-base font-normal leading-6 text-indigo-50"><span className="font-bold text-cyan-300">✓</span><span>Expert instructors with real-world experience</span></li>
+                  <li className="flex items-start gap-3 text-base font-normal leading-6 text-indigo-50"><span className="font-bold text-cyan-300">✓</span><span>Hands-on projects and portfolios</span></li>
+                  <li className="flex items-start gap-3 text-base font-normal leading-6 text-indigo-50"><span className="font-bold text-cyan-300">✓</span><span>Certificates and career support</span></li>
+                  <li className="flex items-start gap-3 text-base font-normal leading-6 text-indigo-50"><span className="font-bold text-cyan-300">✓</span><span>Flexible learning and lifetime access</span></li>
+                </ul>
+              </div>
             </div>
           </section>
 
