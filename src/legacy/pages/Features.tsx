@@ -58,40 +58,40 @@ const FeaturesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-      <div className="max-w-7xl mx-auto w-full px-4 pt-4">
-        <button onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/"))} className="text-sm text-indigo-600 hover:text-indigo-700 flex items-center gap-2">← Back</button>
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-6">
+        <button onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/"))} className="inline-flex items-center gap-2 text-sm font-medium leading-5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400">Back</button>
       </div>
       <Navigation user={user} onLogout={handleLogout} onDashboardNavigation={handleDashboardNavigation} />
 
-      <main className="py-16 flex-grow">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.header initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-12">
-            <h1 className="text-5xl font-bold mb-4">Powerful Features</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Everything you need to learn, teach and grow in the tech industry.</p>
+      <main className="flex-grow py-16">
+        <div className="mx-auto w-full max-w-7xl space-y-8 px-6">
+          <motion.header initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }} className="max-w-3xl border-b border-slate-200 pb-16 dark:border-slate-800">
+            <h1 className="text-5xl font-bold leading-tight text-slate-950 dark:text-slate-50">Everything you need to learn, teach, and grow.</h1>
+            <p className="mt-4 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">A practical learning platform for building skills, teaching expertise, and creating meaningful career momentum.</p>
           </motion.header>
 
           <section aria-labelledby="learning-features" className="mb-16">
-            <h2 id="learning-features" className="text-3xl font-bold mb-6 text-center">Learning Features</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 id="learning-features" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Learning features</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {features.map((f, i) => (
-                <motion.div key={i} whileHover={{ y: -6 }} className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow hover:shadow-lg transition">
-                  <div className="mb-4">{f.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">{f.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">{f.description}</p>
+                <motion.div key={i} whileHover={{ y: -2 }} className={`${i === 0 ? "md:col-span-2 lg:col-span-2" : ""} rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900`}>
+                  <div className="mb-4">{React.cloneElement(f.icon, { className: `${i === 0 ? "h-14 w-14" : "h-10 w-10"} text-indigo-600 dark:text-indigo-400` })}</div>
+                  <h3 className={`${i === 0 ? "text-2xl" : "text-lg"} font-semibold leading-7 text-slate-950 dark:text-slate-50`}>{f.title}</h3>
+                  <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">{f.description}</p>
                 </motion.div>
               ))}
             </div>
           </section>
 
           <section aria-labelledby="for-instructors" className="mb-16">
-            <h2 id="for-instructors" className="text-3xl font-bold mb-6 text-center">For Instructors</h2>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-2xl p-8">
+            <h2 id="for-instructors" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">For instructors</h2>
+            <div className="bg-indigo-600 p-8 text-white dark:bg-indigo-500">
               <div className="grid md:grid-cols-2 gap-4">
                 {instructorFeatures.map((t, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-indigo-600 mt-1" />
-                    <p className="text-gray-700 dark:text-gray-200">{t}</p>
+                    <p className="text-base font-normal leading-6 text-indigo-50">{t}</p>
                   </div>
                 ))}
               </div>
@@ -99,18 +99,18 @@ const FeaturesPage: React.FC = () => {
           </section>
 
           <section aria-labelledby="platform-highlights" className="mb-16">
-            <h2 id="platform-highlights" className="text-3xl font-bold mb-6 text-center">Platform Highlights</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <h2 id="platform-highlights" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Platform highlights</h2>
+            <div className="grid divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
               {platformFeatures.map((p, i) => (
-                <motion.div key={i} whileHover={{ scale: 1.02 }} className="bg-white dark:bg-gray-900 rounded-lg p-4 text-center border">
-                  <p className="font-semibold text-gray-700 dark:text-gray-200">{p}</p>
+                <motion.div key={i} whileHover={{ y: -1 }} className="p-4 text-center">
+                  <p className="text-sm font-semibold leading-5 text-slate-700 dark:text-slate-300">{p}</p>
                 </motion.div>
               ))}
             </div>
           </section>
 
           <section aria-labelledby="why-platform" className="mb-12 bg-white dark:bg-gray-900 rounded-2xl p-10 shadow">
-            <h2 id="why-platform" className="text-3xl font-bold mb-6 text-center">Why Our Platform?</h2>
+            <h2 id="why-platform" className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Why our platform?</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { title: 'Quality Content', items: ['Expert courses', 'Hands-on projects', 'Regular updates'] },

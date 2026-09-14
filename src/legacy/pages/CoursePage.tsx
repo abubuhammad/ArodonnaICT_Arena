@@ -293,11 +293,11 @@ const CoursePage: React.FC = () => {
   if (loading) {
     return (
       <motion.div
-        className="flex justify-center items-center h-screen"
+        className="flex min-h-[60vh] items-center justify-center bg-slate-50 dark:bg-slate-950"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        <div className="h-10 w-10 animate-spin rounded-full border-[3px] border-indigo-600 border-r-transparent"></div>
       </motion.div>
     );
   }
@@ -305,11 +305,11 @@ const CoursePage: React.FC = () => {
   if (error || !course) {
     return (
       <motion.div
-        className="flex justify-center items-center h-screen"
+        className="flex min-h-[60vh] items-center justify-center bg-slate-50 px-6 py-16 dark:bg-slate-950"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <p className="text-red-500 text-lg font-semibold">{error}</p>
+        <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{error}</p>
       </motion.div>
     );
   }
@@ -323,25 +323,25 @@ const CoursePage: React.FC = () => {
   const displayedProgress = enrollment ? enrollment.progressPercentage : (course.progress || 0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-6 pt-6 flex items-center gap-4">
+    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-6 pt-6">
         <button
           onClick={goBack}
-          className="text-sm text-indigo-600 hover:text-indigo-700 flex items-center gap-2"
+          className="inline-flex items-center gap-2 text-sm font-medium leading-5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
         >
           ← Back
         </button>
         {user && (
           <button
             onClick={goDashboard}
-            className="text-sm text-gray-700 hover:text-gray-900 flex items-center gap-2"
+            className="inline-flex items-center gap-2 text-sm font-medium leading-5 text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-50"
           >
             ← Back to Dashboard
           </button>
         )}
       </div>
       <motion.div
-        className="max-w-4xl mx-auto p-6"
+        className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -361,7 +361,7 @@ const CoursePage: React.FC = () => {
         {user && course?.instructor?.isAvailableForCall && (
           <button
             onClick={handleLiveChat}
-            className="mt-4 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+            className="h-10 rounded-lg bg-indigo-600 px-4 text-sm font-medium leading-5 text-white transition-colors hover:bg-indigo-700"
           >
             Join Live Video Call
           </button>
@@ -377,11 +377,11 @@ const CoursePage: React.FC = () => {
             onCodeExercise={handleCodeExercise}
           />
         ) : (
-          <div className="mt-8 rounded-lg border border-indigo-100 bg-white p-6 text-center shadow-sm">
-            <p className="text-gray-700">Ready to start learning? Create an account or sign in to enroll.</p>
+          <div className="mt-8 border-t border-slate-200 py-8 text-center dark:border-slate-800">
+            <p className="text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Ready to start learning? Create an account or sign in to enroll.</p>
             <button
               onClick={() => navigate(`/courses/${courseId}/enroll`)}
-              className="mt-4 rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700"
+              className="mt-4 inline-flex h-11 items-center justify-center rounded-lg bg-indigo-600 px-6 text-sm font-medium leading-5 text-white transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
             >
               Enroll in this course
             </button>

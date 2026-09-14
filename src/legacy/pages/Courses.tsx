@@ -12,6 +12,7 @@ import Footer from "../components/layout/Footer";
 import CourseCardSmall from "../components/courses/CourseCardSmall";
 import SearchBar from "../components/ui/SearchBar";
 import SkeletonCourse from "../components/ui/SkeletonCourse";
+import { Card } from "../components/ui/card";
 
 const PAGE_SIZE = 9;
 
@@ -118,11 +119,11 @@ const CoursesPage: React.FC = () => {
   }, [filtered, page]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-      <div className="max-w-7xl mx-auto w-full px-4 pt-4">
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-6">
         <button
           onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/"))}
-          className="text-sm text-indigo-600 hover:text-indigo-700 flex items-center gap-2"
+          className="inline-flex items-center gap-2 text-sm font-medium leading-5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
         >
           ← Back
         </button>
@@ -133,11 +134,11 @@ const CoursesPage: React.FC = () => {
         onDashboardNavigation={handleDashboardNavigation}
       />
 
-      <main className="py-12 flex-grow">
-        <div className="max-w-7xl mx-auto px-4">
-          <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">All Courses</h1>
-            <p className="text-gray-600 dark:text-gray-400">Browse our comprehensive course catalog. Use search and filters to find the right course.</p>
+      <main className="flex-grow py-16">
+        <div className="mx-auto w-full max-w-7xl space-y-8 px-6">
+          <header className="max-w-3xl border-b border-slate-200 pb-8 dark:border-slate-800">
+            <h1 className="text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">All courses</h1>
+            <p className="mt-3 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Browse the catalogue and find the right practical course for your next step.</p>
           </header>
 
           {/* Controls: search, sort, category chips */}
@@ -169,7 +170,7 @@ const CoursesPage: React.FC = () => {
                 <button onClick={clearCategories} className="text-sm text-indigo-600 hover:underline">Clear</button>
               )}
             </div>
-            <div className="rounded-2xl p-4 sm:p-5 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-gray-800 shadow-sm">
+            <div className="border-y border-slate-200 py-4 dark:border-slate-800">
               <div className="flex flex-wrap gap-2">
                 <motion.button whileHover={{ scale: 1.02 }} onClick={clearCategories} className={["px-4 py-2 rounded-full text-sm font-medium transition", isAllSelected ? "bg-indigo-600 text-white" : "bg-white dark:bg-gray-800 border"] .join(' ')}>All</motion.button>
                 {categories.map((cat) => {
@@ -193,15 +194,16 @@ const CoursesPage: React.FC = () => {
                 <SkeletonCourse count={PAGE_SIZE} />
               </div>
             ) : displayed.length === 0 ? (
-              <div className="rounded-2xl p-12 text-center bg-white/70 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800">
-                <p className="text-gray-600 dark:text-gray-300 text-lg">No courses match your filters.</p>
+              <div className="py-12 text-center">
+                <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">No courses match your filters</h3>
+                <p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Try a different search or clear the selected categories.</p>
               </div>
             ) : (
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {displayed.map((course: any) => (
-                  <CourseCardSmall
-                    key={course._id || course.id}
-                    course={{
+                  <Card key={course._id || course.id} className="overflow-hidden transition-shadow hover:shadow-md focus-within:ring-2 focus-within:ring-indigo-500">
+                    <CourseCardSmall
+                      course={{
                       _id: course._id || course.id,
                       title: course.title,
                       description: course.description,
@@ -212,13 +214,14 @@ const CoursesPage: React.FC = () => {
                       duration: course.duration || 'N/A',
                       thumbnail: course.thumbnail,
                     }}
-                    onEnroll={handleEnrollment}
-                    onViewCourse={(courseId) => navigate(`/courses/${courseId}`)}
-                    locale={(user as any)?.locale}
-                    currencyCode={(user as any)?.currency}
-                    currentUserId={(user as any)?.id || (user as any)?._id}
-                    currentUserRole={user?.role}
-                  />
+                      onEnroll={handleEnrollment}
+                      onViewCourse={(courseId) => navigate(`/courses/${courseId}`)}
+                      locale={(user as any)?.locale}
+                      currencyCode={(user as any)?.currency}
+                      currentUserId={(user as any)?.id || (user as any)?._id}
+                      currentUserRole={user?.role}
+                    />
+                  </Card>
                 ))}
               </div>
             )}
