@@ -20,6 +20,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
         secondaryColor: updateData.secondaryColor,
         backgroundGradient: updateData.backgroundGradient,
         fontFamily: updateData.fontFamily,
+        logoUrl: updateData.logoUrl,
         active: updateData.active,
       },
     });

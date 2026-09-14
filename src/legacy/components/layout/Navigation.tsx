@@ -6,6 +6,7 @@ import { Sun, Moon } from 'lucide-react';
 import { User } from '../../types';
 import { useDispatch } from 'react-redux';
 import { requestInstructorRole } from '../../store/slices/authSlice';
+import { ThemeContext } from '../../context/ThemeContext';
 
 interface NavigationProps {
   user: User | null;
@@ -23,6 +24,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const dispatch = useDispatch();
+  const { theme } = React.useContext(ThemeContext);
 
   const [isDark, setIsDark] = useState<boolean>(() => {
     const saved = localStorage.getItem('theme');
@@ -82,16 +84,24 @@ const Navigation: React.FC<NavigationProps> = ({
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand - Always visible */}
-          <div className="flex items-center space-x-4">
-          <img 
-          src="/logo192.png" 
-          alt="Logo" 
-          className="h-10 w-10 rounded-lg" 
+          <button
+            type="button"
+            onClick={() => handleNav('/')}
+            className="flex items-center space-x-4 rounded-lg text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950"
+            aria-label="Go to Arodonna ICT Arena homepage"
+          >
+          <img
+          src={theme?.logoUrl || "/logo192.png"}
+          alt="Arodonna ICT Arena logo"
+          className="h-10 w-10 rounded-lg object-contain"
+          onError={(event) => {
+            event.currentTarget.src = '/logo192.png';
+          }}
           />
             <span className="text-lg sm:text-xl font-bold text-indigo-600">
               Arodonna ICT Arena
             </span>
-          </div>
+          </button>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

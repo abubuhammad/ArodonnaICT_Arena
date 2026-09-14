@@ -61,6 +61,11 @@ const ManageTheme: React.FC = () => {
           <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Font family</label>
           <Input name="fontFamily" value={formData.fontFamily || ""} onChange={handleChange} />
         </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Logo URL</label>
+          <Input name="logoUrl" value={formData.logoUrl || ""} onChange={handleChange} placeholder="/logo192.png or an image URL" />
+          <p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Use a public image URL or a path served by the app.</p>
+        </div>
         <div className="flex justify-end">
           <Button type="submit">Update theme</Button>
         </div>

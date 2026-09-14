@@ -9,6 +9,7 @@ export interface ThemeConfig {
   secondaryColor: string;
   backgroundGradient: string;
   fontFamily?: string;
+  logoUrl?: string;
 }
 
 interface ThemeContextProps {
