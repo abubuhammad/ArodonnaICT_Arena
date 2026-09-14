@@ -1,0 +1,13 @@
+{
+  "name": "arodonna-ict-arena-lms",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names backend,frontend --prefix name \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "start": "concurrently --kill-others-on-fail --names backend,frontend --prefix name \"npm --prefix backend start\" \"npm --prefix frontend start\"",
+    "typecheck:backend": "npm --prefix backend run typecheck",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "title": "[Course title]",
+  "description": "[Detailed course description]",
+  "category": "[Category name or category ID]",
+  "price": 0,
+  "isFree": true,
+  "thumbnail": "/images/course-default.jpg",
+  "duration": "[For example: 6 hours]",
+  "level": "Beginner",
+  "modules": [
+    {
+      "title": "[Module 1 title]",
+      "description": "[Module 1 description]",
+      "order": 0,
+      "lessons": [
+        {
+          "title": "[Lesson 1 title]",
+          "description": "[Lesson 1 description]",
+          "lessonType": "text-only",
+          "content": "[Complete lesson content]",
+          "videoUrl": "",
+          "order": 0,
+          "quizQuestion": "",
+          "quizOptions": [],
+          "correctAnswer": ""
+        }
+      ]
+    }
+  ],
+  "finalAssessment": null
+}

@@ -1,0 +1,1711 @@
+[
+  {
+    "name": "courseprogresses",
+    "documents": [
+      {
+        "_id": "693ee1efae48348843d0f8f0",
+        "enrollment": "693ee1eeae48348843d0f8eb",
+        "modules": [
+          {
+            "module": "693ec31dbcc34e9c4fba1c32",
+            "status": "PASSED",
+            "lessonProgress": [
+              {
+                "lesson": "693ec31dbcc34e9c4fba1c35",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T18:37:21.845Z",
+                "completedAt": "2025-12-14T18:37:25.118Z"
+              },
+              {
+                "lesson": "693ec31dbcc34e9c4fba1c36",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T19:37:19.996Z",
+                "completedAt": "2025-12-14T18:38:04.236Z"
+              }
+            ],
+            "assessmentPassed": false,
+            "completedAt": "2025-12-14T18:38:04.730Z"
+          },
+          {
+            "module": "693ec31dbcc34e9c4fba1c33",
+            "status": "NOT_STARTED",
+            "lessonProgress": [
+              {
+                "lesson": "693ec31ebcc34e9c4fba1c39",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "693ec31ebcc34e9c4fba1c3a",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          }
+        ],
+        "createdAt": "2025-12-14T16:12:31.132Z",
+        "updatedAt": "2025-12-14T19:37:20.024Z",
+        "__v": 1
+      },
+      {
+        "_id": "693edad78a434ba5dc6bd39c",
+        "enrollment": "6938b603a0463aff68bb6214",
+        "modules": [
+          {
+            "module": "6938b43ca0463aff68bb5fd7",
+            "status": "NOT_STARTED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fd8",
+                "status": "NOT_STARTED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fd9",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fda",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fdb",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fdd",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fde",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fdf",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe0",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe1",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fe3",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fe4",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe5",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe6",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe7",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fe9",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fea",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5feb",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fec",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fed",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fef",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5ff0",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5ff1",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5ff2",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5ff3",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          }
+        ],
+        "createdAt": "2025-12-14T15:42:15.267Z",
+        "updatedAt": "2025-12-14T19:33:05.350Z",
+        "__v": 0
+      },
+      {
+        "_id": "693edad88a434ba5dc6bd3a5",
+        "enrollment": "693e15c4928cb5812ede6285",
+        "modules": [
+          {
+            "module": "6938b43ca0463aff68bb5fd7",
+            "status": "PASSED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fd8",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:54:59.494Z",
+                "completedAt": "2025-12-14T20:21:52.279Z"
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fd9",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:55:45.173Z",
+                "completedAt": "2025-12-14T19:54:35.805Z"
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fda",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:55:49.307Z",
+                "completedAt": "2025-12-14T19:54:53.825Z"
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fdb",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:55:53.974Z",
+                "completedAt": "2025-12-14T20:26:31.867Z"
+              }
+            ],
+            "assessmentPassed": true,
+            "bestScore": 0,
+            "completedAt": "2025-12-14T21:56:13.122Z"
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fdd",
+            "status": "NOT_STARTED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fde",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:56:22.419Z",
+                "completedAt": "2025-12-14T21:35:04.781Z"
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fdf",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:35:23.319Z",
+                "completedAt": "2025-12-14T21:35:35.605Z"
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe0",
+                "status": "PASSED",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:35:54.754Z",
+                "completedAt": "2025-12-14T21:36:13.285Z"
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe1",
+                "status": "IN_PROGRESS",
+                "attempts": 0,
+                "lastViewedAt": "2025-12-14T21:48:49.326Z"
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fe3",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fe4",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe5",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe6",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fe7",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fe9",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5fea",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5feb",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fec",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5fed",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "6938b43ca0463aff68bb5fef",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "6938b43ca0463aff68bb5ff0",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5ff1",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5ff2",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "6938b43ca0463aff68bb5ff3",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          }
+        ],
+        "createdAt": "2025-12-14T15:42:16.669Z",
+        "updatedAt": "2025-12-14T21:56:22.433Z",
+        "__v": 1
+      },
+      {
+        "_id": "693edad98a434ba5dc6bd3ab",
+        "enrollment": "693ec31f0f2f2b79e46b4d02",
+        "modules": [
+          {
+            "module": "693ec31dbcc34e9c4fba1c32",
+            "status": "NOT_STARTED",
+            "lessonProgress": [
+              {
+                "lesson": "693ec31dbcc34e9c4fba1c35",
+                "status": "NOT_STARTED",
+                "attempts": 0
+              },
+              {
+                "lesson": "693ec31dbcc34e9c4fba1c36",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          },
+          {
+            "module": "693ec31dbcc34e9c4fba1c33",
+            "status": "LOCKED",
+            "lessonProgress": [
+              {
+                "lesson": "693ec31ebcc34e9c4fba1c39",
+                "status": "LOCKED",
+                "attempts": 0
+              },
+              {
+                "lesson": "693ec31ebcc34e9c4fba1c3a",
+                "status": "LOCKED",
+                "attempts": 0
+              }
+            ],
+            "assessmentPassed": false
+          }
+        ],
+        "createdAt": "2025-12-14T15:42:17.584Z",
+        "updatedAt": "2025-12-14T19:33:07.085Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "name": "enrollments",
+    "documents": [
+      {
+        "_id": "693e15c4928cb5812ede6285",
+        "userId": "693e15a5928cb5812ede61ee",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "status": "ENROLLED",
+        "paymentStatus": "WAIVED",
+        "progressPercentage": 0,
+        "finalAssessmentPassed": false,
+        "progress": [
+          {
+            "moduleId": "6938b43ca0463aff68bb5fd7",
+            "lessons": [
+              {
+                "lessonId": "6938b43ca0463aff68bb5fd8",
+                "completed": true,
+                "_id": "693e1607928cb5812ede62eb"
+              },
+              {
+                "lessonId": "6938b43ca0463aff68bb5fd9",
+                "completed": true,
+                "_id": "693e1625928cb5812ede6307"
+              },
+              {
+                "lessonId": "6938b43ca0463aff68bb5fda",
+                "completed": true,
+                "_id": "693e163d928cb5812ede6329"
+              }
+            ],
+            "completed": false,
+            "_id": "693e1607928cb5812ede62ea"
+          }
+        ],
+        "enrolledAt": "2025-12-14T01:41:24.508Z",
+        "createdAt": "2025-12-14T01:41:24.511Z",
+        "updatedAt": "2025-12-14T04:17:29.726Z",
+        "__v": 3,
+        "moduleProgress": {
+          "moduleId": "6938b43ca0463aff68bb5fd7",
+          "assessmentPassed": true,
+          "score": 0,
+          "updatedAt": "2025-12-14T04:17:29.715Z"
+        }
+      },
+      {
+        "_id": "693ec31f0f2f2b79e46b4d02",
+        "userId": "693ec31b0f2f2b79e46b4d01",
+        "courseId": "693ec31cbcc34e9c4fba1c30",
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:02.877Z",
+        "enrolledAt": "2025-12-14T14:01:02.882Z",
+        "finalAssessmentPassed": false,
+        "paymentStatus": "WAIVED",
+        "progress": [],
+        "progressPercentage": 0,
+        "status": "ENROLLED",
+        "updatedAt": "2025-12-14T14:14:18.648Z"
+      },
+      {
+        "_id": "693ee1eeae48348843d0f8eb",
+        "userId": "693e15a5928cb5812ede61ee",
+        "courseId": "693ec31cbcc34e9c4fba1c30",
+        "status": "ENROLLED",
+        "paymentStatus": "WAIVED",
+        "progressPercentage": 0,
+        "finalAssessmentPassed": false,
+        "progress": [],
+        "enrolledAt": "2025-12-14T16:12:30.416Z",
+        "createdAt": "2025-12-14T16:12:30.431Z",
+        "updatedAt": "2025-12-14T16:12:30.431Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b603a0463aff68bb6214",
+        "userId": "693717939fd3c42b3d705803",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "status": "ENROLLED",
+        "paymentStatus": "WAIVED",
+        "progressPercentage": 100,
+        "finalAssessmentPassed": false,
+        "progress": [
+          {
+            "moduleId": "6938b43ca0463aff68bb5fd7",
+            "lessons": [
+              {
+                "lessonId": "6938b43ca0463aff68bb5fd8",
+                "completed": true,
+                "_id": "6938b692a0463aff68bb627a"
+              },
+              {
+                "lessonId": "6938b43ca0463aff68bb5fd9",
+                "completed": true,
+                "_id": "6938b6a7a0463aff68bb6296"
+              },
+              {
+                "lessonId": "6938b43ca0463aff68bb5fda",
+                "completed": true,
+                "_id": "6938b728a0463aff68bb62b8"
+              },
+              {
+                "lessonId": "6938b43ca0463aff68bb5fdb",
+                "completed": true,
+                "_id": "6938b735a0463aff68bb62db"
+              }
+            ],
+            "completed": true,
+            "_id": "6938b692a0463aff68bb6279"
+          }
+        ],
+        "enrolledAt": "2025-12-09T23:51:31.631Z",
+        "createdAt": "2025-12-09T23:51:31.632Z",
+        "updatedAt": "2025-12-09T23:56:37.588Z",
+        "__v": 4
+      }
+    ]
+  },
+  {
+    "name": "categories",
+    "documents": [
+      {
+        "_id": "693743da075d263628d21136",
+        "name": "Business, Entrepreneurship & Strategy",
+        "createdAt": "2025-12-08T21:32:10.270Z",
+        "updatedAt": "2025-12-08T21:32:10.270Z",
+        "__v": 0
+      },
+      {
+        "_id": "693743ee075d263628d2113e",
+        "name": "Cybersecurity & Privacy",
+        "createdAt": "2025-12-08T21:32:30.293Z",
+        "updatedAt": "2025-12-08T21:32:30.293Z",
+        "__v": 0
+      },
+      {
+        "_id": "6937441a075d263628d2114a",
+        "name": "Software Testing & Quality Assurance",
+        "createdAt": "2025-12-08T21:33:14.114Z",
+        "updatedAt": "2025-12-08T21:33:14.114Z",
+        "__v": 0
+      },
+      {
+        "_id": "6937443b075d263628d21156",
+        "name": "Multimedia & Digital Content Production",
+        "createdAt": "2025-12-08T21:33:47.943Z",
+        "updatedAt": "2025-12-08T21:33:47.943Z",
+        "__v": 0
+      },
+      {
+        "_id": "693744f4075d263628d2115b",
+        "name": "Project Management & Agile Practices",
+        "createdAt": "2025-12-08T21:36:52.873Z",
+        "updatedAt": "2025-12-08T21:36:52.873Z",
+        "__v": 0
+      },
+      {
+        "_id": "693713846bbbd69d203e3c3d",
+        "name": "Design",
+        "__v": 0,
+        "createdAt": "2025-12-08T18:05:56.801Z",
+        "updatedAt": "2025-12-14T14:14:18.230Z"
+      },
+      {
+        "_id": "69374397075d263628d21126",
+        "name": "DevOps & Cloud Engineering",
+        "createdAt": "2025-12-08T21:31:03.404Z",
+        "updatedAt": "2025-12-08T21:31:03.404Z",
+        "__v": 0
+      },
+      {
+        "_id": "693713846bbbd69d203e3c3c",
+        "name": "Programming",
+        "__v": 0,
+        "createdAt": "2025-12-08T18:05:56.598Z",
+        "updatedAt": "2025-12-14T14:14:18.028Z"
+      },
+      {
+        "_id": "69374360075d263628d21116",
+        "name": "Web Development",
+        "createdAt": "2025-12-08T21:30:08.787Z",
+        "updatedAt": "2025-12-08T21:30:08.787Z",
+        "__v": 0
+      },
+      {
+        "_id": "69374370075d263628d2111a",
+        "name": "Programming Fundamentals",
+        "createdAt": "2025-12-08T21:30:24.550Z",
+        "updatedAt": "2025-12-08T21:30:24.550Z",
+        "__v": 0
+      },
+      {
+        "_id": "6937438a075d263628d21122",
+        "name": "Data Science & Machine Learning",
+        "createdAt": "2025-12-08T21:30:50.234Z",
+        "updatedAt": "2025-12-08T21:30:50.234Z",
+        "__v": 0
+      },
+      {
+        "_id": "693743fb075d263628d21142",
+        "name": "Networking & Infrastructure",
+        "createdAt": "2025-12-08T21:32:43.106Z",
+        "updatedAt": "2025-12-08T21:32:43.106Z",
+        "__v": 0
+      },
+      {
+        "_id": "69374409075d263628d21146",
+        "name": "Artificial Intelligence & Generative AI",
+        "createdAt": "2025-12-08T21:32:57.399Z",
+        "updatedAt": "2025-12-08T21:32:57.399Z",
+        "__v": 0
+      },
+      {
+        "_id": "6937437d075d263628d2111e",
+        "name": "Mobile Development",
+        "createdAt": "2025-12-08T21:30:37.350Z",
+        "updatedAt": "2025-12-08T21:30:37.350Z",
+        "__v": 0
+      },
+      {
+        "_id": "69374424075d263628d2114e",
+        "name": "Instructional Design & Teaching Practice",
+        "createdAt": "2025-12-08T21:33:24.990Z",
+        "updatedAt": "2025-12-08T21:33:24.990Z",
+        "__v": 0
+      },
+      {
+        "_id": "693743a6075d263628d2112a",
+        "name": "Databases & Data Engineering",
+        "createdAt": "2025-12-08T21:31:18.310Z",
+        "updatedAt": "2025-12-08T21:31:18.310Z",
+        "__v": 0
+      },
+      {
+        "_id": "693743cc075d263628d21132",
+        "name": "Product Management",
+        "createdAt": "2025-12-08T21:31:56.233Z",
+        "updatedAt": "2025-12-08T21:31:56.233Z",
+        "__v": 0
+      },
+      {
+        "_id": "6937442f075d263628d21152",
+        "name": "Compliance, Legal & Regulations",
+        "createdAt": "2025-12-08T21:33:35.230Z",
+        "updatedAt": "2025-12-08T21:33:35.230Z",
+        "__v": 0
+      },
+      {
+        "_id": "693743ba075d263628d2112e",
+        "name": "UX / UI & Interaction Design",
+        "createdAt": "2025-12-08T21:31:38.150Z",
+        "updatedAt": "2025-12-08T21:31:38.150Z",
+        "__v": 0
+      },
+      {
+        "_id": "693743e4075d263628d2113a",
+        "name": "Marketing & Growth",
+        "createdAt": "2025-12-08T21:32:20.038Z",
+        "updatedAt": "2025-12-08T21:32:20.038Z",
+        "__v": 0
+      },
+      {
+        "_id": "693744fd075d263628d2115f",
+        "name": "Professional Certifications & Exam Prep",
+        "createdAt": "2025-12-08T21:37:01.031Z",
+        "updatedAt": "2025-12-08T21:37:01.031Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "name": "auditlogs",
+    "documents": [
+      {
+        "_id": "693b4e3a12f214520cf5d96c",
+        "actorId": "693713826bbbd69d203e3c39",
+        "actorRole": "ADMIN",
+        "actionType": "COURSE_STATUS_CHANGE",
+        "resourceType": "Course",
+        "resourceId": "6938b43ba0463aff68bb5fd5",
+        "details": {
+          "status": "REVIEW",
+          "publishAt": null
+        },
+        "tenantId": null,
+        "ipAddress": "::1",
+        "createdAt": "2025-12-11T23:05:30.218Z",
+        "__v": 0
+      },
+      {
+        "_id": "693b4e8512f214520cf5da54",
+        "actorId": "693713826bbbd69d203e3c39",
+        "actorRole": "ADMIN",
+        "actionType": "COURSE_STATUS_CHANGE",
+        "resourceType": "Course",
+        "resourceId": "693776e895af36449d15ade2",
+        "details": {
+          "status": "REVIEW",
+          "publishAt": null
+        },
+        "tenantId": null,
+        "ipAddress": "::1",
+        "createdAt": "2025-12-11T23:06:45.327Z",
+        "__v": 0
+      },
+      {
+        "_id": "693b4e4312f214520cf5d9dc",
+        "actorId": "693713826bbbd69d203e3c39",
+        "actorRole": "ADMIN",
+        "actionType": "COURSE_STATUS_CHANGE",
+        "resourceType": "Course",
+        "resourceId": "6938b43ba0463aff68bb5fd5",
+        "details": {
+          "status": "PUBLISHED",
+          "publishAt": "2025-12-11T23:05:39.405Z"
+        },
+        "tenantId": null,
+        "ipAddress": "::1",
+        "createdAt": "2025-12-11T23:05:39.615Z",
+        "__v": 0
+      },
+      {
+        "_id": "693b4e8812f214520cf5dac4",
+        "actorId": "693713826bbbd69d203e3c39",
+        "actorRole": "ADMIN",
+        "actionType": "COURSE_STATUS_CHANGE",
+        "resourceType": "Course",
+        "resourceId": "693776e895af36449d15ade2",
+        "details": {
+          "status": "PUBLISHED",
+          "publishAt": "2025-12-11T23:06:48.612Z"
+        },
+        "tenantId": null,
+        "ipAddress": "::1",
+        "createdAt": "2025-12-11T23:06:48.801Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "name": "quizzes",
+    "documents": []
+  },
+  {
+    "name": "themes",
+    "documents": [
+      {
+        "_id": "693717109fd3c42b3d7057fc",
+        "name": "Default",
+        "primaryColor": "#4F46E5",
+        "secondaryColor": "#A5B4FC",
+        "backgroundGradient": "linear-gradient(to right, #4F46E5, #A5B4FC)",
+        "fontFamily": "sans-serif",
+        "active": true,
+        "createdAt": "2025-12-08T18:21:04.448Z",
+        "updatedAt": "2025-12-08T18:21:04.448Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "name": "users",
+    "documents": [
+      {
+        "_id": "693713826bbbd69d203e3c39",
+        "email": "admin@example.com",
+        "__v": 0,
+        "avatar": "/images/default-avatar.png",
+        "createdAt": "2025-12-08T18:05:54.123Z",
+        "expertise": [],
+        "isAvailableForCall": false,
+        "name": "Admin User",
+        "password": "$2a$10$poR5c9Rdq/Is.HOs1amfUuJxjH7aA2tZgkU22q0HwNZvwQBM7Zh4e",
+        "role": "ADMIN",
+        "updatedAt": "2025-12-14T14:14:15.747Z"
+      },
+      {
+        "_id": "6937345a2c25468633ccf11b",
+        "name": "Arome",
+        "email": "instructor@gmail.com",
+        "password": "$2a$10$vQ44Atd1flDWeas7Agm2uO0IiLHP8RS/G0HZHb3K42d236vi0sjK2",
+        "role": "INSTRUCTOR",
+        "avatar": "/images/default-avatar.png",
+        "isAvailableForCall": false,
+        "expertise": [],
+        "createdAt": "2025-12-08T20:26:02.511Z",
+        "updatedAt": "2025-12-13T13:33:51.948Z",
+        "__v": 0,
+        "bankDetails": {
+          "accountName": "Abubakar Arome",
+          "accountNumber": "7038352400",
+          "bankName": "OPay",
+          "bankCode": "100004"
+        },
+        "country": "Nigeria",
+        "countryCode": "NG",
+        "currency": "NGN",
+        "locale": "en-NG",
+        "onboardingCompleted": true
+      },
+      {
+        "_id": "693717939fd3c42b3d705803",
+        "name": "Arome",
+        "email": "student@gmail.com",
+        "password": "$2a$10$4ZrK8/00DggTaRdgezFESOXe2OrEEvnIQ0kgqQMNuyPmOlzn8IlfO",
+        "role": "STUDENT",
+        "avatar": "/images/default-avatar.png",
+        "isAvailableForCall": false,
+        "expertise": [],
+        "createdAt": "2025-12-08T18:23:15.078Z",
+        "updatedAt": "2025-12-08T18:23:15.078Z",
+        "__v": 0
+      },
+      {
+        "_id": "693ec31b0f2f2b79e46b4d00",
+        "email": "instructor@example.com",
+        "__v": 0,
+        "avatar": "/images/default-avatar.png",
+        "bio": "Teaches programming fundamentals.",
+        "createdAt": "2025-12-14T14:00:58.084Z",
+        "currency": "USD",
+        "expertise": [
+          "JavaScript",
+          "TypeScript",
+          "Node.js"
+        ],
+        "isAvailableForCall": false,
+        "locale": "en-US",
+        "name": "Jane Instructor",
+        "onboardingCompleted": false,
+        "password": "$2a$10$s.NR8L2wdKbYrCHwfKyVaOXcrDinGHRdTehZyANAU2Q.FNE9WpGeS",
+        "role": "INSTRUCTOR",
+        "title": "Senior Instructor",
+        "updatedAt": "2025-12-14T14:14:16.416Z"
+      },
+      {
+        "_id": "693ec31b0f2f2b79e46b4d01",
+        "email": "student@example.com",
+        "__v": 0,
+        "avatar": "/images/default-avatar.png",
+        "createdAt": "2025-12-14T14:00:59.673Z",
+        "currency": "USD",
+        "expertise": [],
+        "isAvailableForCall": false,
+        "locale": "en-US",
+        "name": "John Student",
+        "onboardingCompleted": false,
+        "password": "$2a$10$JHo7antaW2CpyD5b6HhrZOGQMrZMOHHDREj3UhOMDbPqK3FP/e0nu",
+        "role": "STUDENT",
+        "updatedAt": "2025-12-14T14:14:17.804Z"
+      },
+      {
+        "_id": "693e15a5928cb5812ede61ee",
+        "name": "Student2",
+        "email": "student2@gmail.com",
+        "password": "$2a$10$yKjgq7ApAid3S4C1ZK9a2euipuJWYAdOt8vEfIW758y2MKackpOrS",
+        "role": "STUDENT",
+        "avatar": "/images/default-avatar.png",
+        "isAvailableForCall": false,
+        "expertise": [],
+        "locale": "en-US",
+        "currency": "USD",
+        "onboardingCompleted": false,
+        "createdAt": "2025-12-14T01:40:53.790Z",
+        "updatedAt": "2025-12-14T01:40:53.790Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "name": "quizattempts",
+    "documents": []
+  },
+  {
+    "name": "modules",
+    "documents": [
+      {
+        "_id": "69378a0cbb5e481ff3276afc",
+        "title": "Introduction to Cybersecurity Fundamentals",
+        "description": "Establish core security concepts, the CIA triad, and common threat vectors so learners can recognize basic risks. This module prepares learners to think like defenders and understand where to begin securing systems.",
+        "order": 0,
+        "lessons": [
+          "69378a0cbb5e481ff3276afd",
+          "69378a0cbb5e481ff3276afe",
+          "69378a0cbb5e481ff3276aff",
+          "69378a0cbb5e481ff3276b00"
+        ],
+        "assessment": null,
+        "courseId": "693776e895af36449d15ade2",
+        "createdAt": "2025-12-09T02:31:40.381Z",
+        "updatedAt": "2025-12-14T13:59:59.498Z",
+        "__v": 1
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b08",
+        "title": "Secure Coding Practices and Encryption Basics",
+        "description": "Provide hands-on secure-coding rules: input validation, safe authentication, basic encryption, and secure error handling. Learners will practice small, executable examples.",
+        "order": 2,
+        "lessons": [
+          "69378a0cbb5e481ff3276b09",
+          "69378a0cbb5e481ff3276b0a",
+          "69378a0cbb5e481ff3276b0b",
+          "69378a0cbb5e481ff3276b0c"
+        ],
+        "assessment": null,
+        "courseId": "693776e895af36449d15ade2",
+        "createdAt": "2025-12-09T02:31:40.963Z",
+        "updatedAt": "2025-12-14T14:00:01.847Z",
+        "__v": 1
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fd7",
+        "title": "Introduction to Data Science Fundamentals",
+        "description": "Learn the core steps of data science and the typical machine learning workflow, plus the basic file and data types you'll encounter. This module also introduces the tools and simple first code examples to make data analysis practical.",
+        "order": 0,
+        "lessons": [
+          "6938b43ca0463aff68bb5fd8",
+          "6938b43ca0463aff68bb5fd9",
+          "6938b43ca0463aff68bb5fda",
+          "6938b43ca0463aff68bb5fdb"
+        ],
+        "assessment": "Test your understanding of the data science workflow, common file formats, and basic toolchain usage.",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "createdAt": "2025-12-09T23:43:56.041Z",
+        "updatedAt": "2025-12-14T14:00:05.002Z",
+        "__v": 1
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe9",
+        "title": "Machine Learning Basics",
+        "description": "Cover the types of machine learning (supervised, unsupervised), simple algorithms like linear regression and classification fundamentals, and introduce feature engineering. Emphasis on intuition and simple hands-on models.",
+        "order": 3,
+        "lessons": [
+          "6938b43ca0463aff68bb5fea",
+          "6938b43ca0463aff68bb5feb",
+          "6938b43ca0463aff68bb5fec",
+          "6938b43ca0463aff68bb5fed"
+        ],
+        "assessment": "Evaluate understanding of supervised vs unsupervised methods, simple model training, and basic feature engineering techniques.",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "createdAt": "2025-12-09T23:43:56.569Z",
+        "updatedAt": "2025-12-14T14:00:08.491Z",
+        "__v": 1
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fef",
+        "title": "Model Training, Evaluation & Practical Workflow",
+        "description": "Teach strategies for splitting data, validation approaches, evaluation metrics for regression and classification, and a final end-to-end mini project. Emphasize reproducible, iterative workflows.",
+        "order": 4,
+        "lessons": [
+          "6938b43ca0463aff68bb5ff0",
+          "6938b43ca0463aff68bb5ff1",
+          "6938b43ca0463aff68bb5ff2",
+          "6938b43ca0463aff68bb5ff3"
+        ],
+        "assessment": "Assess ability to perform train/test splits, use cross-validation, interpret evaluation metrics, detect overfitting, and deliver a simple end-to-end model.",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "createdAt": "2025-12-09T23:43:56.777Z",
+        "updatedAt": "2025-12-14T14:00:09.765Z",
+        "__v": 1
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b0e",
+        "title": "Privacy, Compliance, and Data Protection",
+        "description": "Introduce privacy principles, major regulations (like GDPR basics), and practical compliance checks for small teams. Teach data minimization and basic privacy-by-design techniques.",
+        "order": 3,
+        "lessons": [
+          "69378a0dbb5e481ff3276b0f",
+          "69378a0dbb5e481ff3276b10",
+          "69378a0dbb5e481ff3276b11",
+          "69378a0dbb5e481ff3276b12"
+        ],
+        "assessment": null,
+        "courseId": "693776e895af36449d15ade2",
+        "createdAt": "2025-12-09T02:31:41.173Z",
+        "updatedAt": "2025-12-14T14:00:02.926Z",
+        "__v": 1
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fdd",
+        "title": "Data Analysis & Visualization",
+        "description": "Learn how to explore data using summary statistics and visualizations to discover patterns and guide modeling decisions. This module provides practical EDA techniques using pandas and plotting libraries.",
+        "order": 1,
+        "lessons": [
+          "6938b43ca0463aff68bb5fde",
+          "6938b43ca0463aff68bb5fdf",
+          "6938b43ca0463aff68bb5fe0",
+          "6938b43ca0463aff68bb5fe1"
+        ],
+        "assessment": "Assess your ability to compute summary statistics, create visualizations, and interpret plots to inform modeling choices.",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "createdAt": "2025-12-09T23:43:56.217Z",
+        "updatedAt": "2025-12-14T14:00:06.153Z",
+        "__v": 1
+      },
+      {
+        "_id": "693ec31dbcc34e9c4fba1c33",
+        "title": "HTML & CSS Basics",
+        "description": "Learn structure and styling.",
+        "order": 1,
+        "lessons": [
+          "693ec31ebcc34e9c4fba1c39",
+          "693ec31ebcc34e9c4fba1c3a"
+        ],
+        "assessment": null,
+        "courseId": "693ec31cbcc34e9c4fba1c30",
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:01.152Z",
+        "updatedAt": "2025-12-14T14:01:02.363Z"
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b14",
+        "title": "Practical Application, Workshop, and Final Assessment",
+        "description": "Apply learned skills to build a small secure feature, perform a threat-modeling exercise, and follow a compliance checklist. This module consolidates skills with practical tasks.",
+        "order": 4,
+        "lessons": [
+          "69378a0dbb5e481ff3276b15",
+          "69378a0dbb5e481ff3276b16",
+          "69378a0dbb5e481ff3276b17",
+          "69378a0dbb5e481ff3276b18"
+        ],
+        "assessment": null,
+        "courseId": "693776e895af36449d15ade2",
+        "createdAt": "2025-12-09T02:31:41.375Z",
+        "updatedAt": "2025-12-14T14:00:04.002Z",
+        "__v": 1
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b02",
+        "title": "Threat Modeling & Secure System Design",
+        "description": "Teach structured threat modeling (STRIDE) and practical steps to reduce an application's attack surface. Learners will produce simple threat models for small applications.",
+        "order": 1,
+        "lessons": [
+          "69378a0cbb5e481ff3276b03",
+          "69378a0cbb5e481ff3276b04",
+          "69378a0cbb5e481ff3276b05",
+          "69378a0cbb5e481ff3276b06"
+        ],
+        "assessment": null,
+        "courseId": "693776e895af36449d15ade2",
+        "createdAt": "2025-12-09T02:31:40.575Z",
+        "updatedAt": "2025-12-14T14:00:00.719Z",
+        "__v": 1
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe3",
+        "title": "Statistics & Probability for ML",
+        "description": "Introduce core statistics and probability concepts needed for machine learning: descriptive statistics, probability basics, distributions, tests, and correlation. Emphasis on intuition and practical interpretation.",
+        "order": 2,
+        "lessons": [
+          "6938b43ca0463aff68bb5fe4",
+          "6938b43ca0463aff68bb5fe5",
+          "6938b43ca0463aff68bb5fe6",
+          "6938b43ca0463aff68bb5fe7"
+        ],
+        "assessment": "Measure understanding of descriptive statistics, probability concepts, common distributions, hypothesis testing, and correlation measures.",
+        "courseId": "6938b43ba0463aff68bb5fd5",
+        "createdAt": "2025-12-09T23:43:56.389Z",
+        "updatedAt": "2025-12-14T14:00:07.355Z",
+        "__v": 1
+      },
+      {
+        "_id": "693ec31dbcc34e9c4fba1c32",
+        "title": "Getting Started",
+        "description": "Setup and tooling.",
+        "order": 0,
+        "lessons": [
+          "693ec31dbcc34e9c4fba1c35",
+          "693ec31dbcc34e9c4fba1c36"
+        ],
+        "assessment": null,
+        "courseId": "693ec31cbcc34e9c4fba1c30",
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:01.151Z",
+        "updatedAt": "2025-12-14T14:01:01.754Z"
+      }
+    ]
+  },
+  {
+    "name": "courses",
+    "documents": [
+      {
+        "_id": "6938b43ba0463aff68bb5fd5",
+        "title": "Data Science & Machine Learning: Beginner Practical Course",
+        "description": "By the end of this course learners will be able to load and explore real datasets, apply basic statistical reasoning, build simple machine learning models, and evaluate them using standard metrics. The course focuses on hands-on exercises, clear explanations of core concepts, and practical workflows that connect data analysis to model training and evaluation. Learners will complete small runnable projects that demonstrate end-to-end data science processes.",
+        "instructor": "6937345a2c25468633ccf11b",
+        "category": "Data Science & Machine Learning",
+        "price": 0,
+        "enrolledStudents": [],
+        "isFree": true,
+        "modules": [
+          "6938b43ca0463aff68bb5fd7",
+          "6938b43ca0463aff68bb5fdd",
+          "6938b43ca0463aff68bb5fe3",
+          "6938b43ca0463aff68bb5fe9",
+          "6938b43ca0463aff68bb5fef"
+        ],
+        "thumbnail": null,
+        "level": "Beginner",
+        "duration": "12 hours",
+        "progressPercentage": 0,
+        "finalAssessment": null,
+        "createdAt": "2025-12-09T23:43:55.850Z",
+        "updatedAt": "2025-12-11T23:05:39.407Z",
+        "__v": 1,
+        "status": "PUBLISHED",
+        "publishAt": "2025-12-11T23:05:39.405Z"
+      },
+      {
+        "_id": "693776e895af36449d15ade2",
+        "title": "Foundations of Cybersecurity & Privacy for Developers",
+        "description": "Learn practical cybersecurity and privacy fundamentals to protect applications and data. By course end, learners will be able to identify common threats, apply secure-coding techniques, perform simple threat models, and follow basic compliance steps to reduce risk.",
+        "instructor": "6937345a2c25468633ccf11b",
+        "category": "Cybersecurity & Privacy",
+        "price": 200,
+        "enrolledStudents": [],
+        "isFree": false,
+        "modules": [
+          "69378a0cbb5e481ff3276afc",
+          "69378a0cbb5e481ff3276b02",
+          "69378a0cbb5e481ff3276b08",
+          "69378a0dbb5e481ff3276b0e",
+          "69378a0dbb5e481ff3276b14"
+        ],
+        "thumbnail": "/images/course-default.jpg",
+        "level": "Beginner",
+        "duration": "10 hours",
+        "progressPercentage": 0,
+        "finalAssessment": null,
+        "createdAt": "2025-12-09T01:10:00.125Z",
+        "updatedAt": "2025-12-11T23:06:48.613Z",
+        "__v": 1,
+        "status": "PUBLISHED",
+        "publishAt": "2025-12-11T23:06:48.612Z"
+      },
+      {
+        "_id": "693ec31cbcc34e9c4fba1c30",
+        "slug": "intro-to-web-development",
+        "title": "Intro to Web Development",
+        "description": "Learn HTML, CSS, and JavaScript basics to build modern web pages.",
+        "instructor": "693ec31b0f2f2b79e46b4d00",
+        "category": "Programming",
+        "price": 0,
+        "enrolledStudents": [],
+        "isFree": true,
+        "modules": [
+          "693ec31dbcc34e9c4fba1c32",
+          "693ec31dbcc34e9c4fba1c33"
+        ],
+        "thumbnail": "/images/course-default.jpg",
+        "level": "Beginner",
+        "duration": "4 hours",
+        "progressPercentage": 0,
+        "finalAssessment": null,
+        "status": "DRAFT",
+        "publishAt": null,
+        "reviewRequestedAt": null,
+        "createdAt": "2025-12-14T14:01:00.858Z",
+        "updatedAt": "2025-12-14T14:01:02.658Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "name": "lessons",
+    "documents": [
+      {
+        "_id": "69378a0cbb5e481ff3276b0c",
+        "title": "Error Handling and Secure Logging (Video)",
+        "description": "Show how to handle errors safely without leaking secrets and how to log events for monitoring while protecting sensitive information.",
+        "lessonType": "video",
+        "content": "Transcript/Notes:\nGood error handling avoids exposing internal details (stack traces, SQL errors) to end users. Always return generic error messages to clients and log the detailed error server-side.\n\nLogging best practices:\n- Log context and identifiers, but mask or avoid logging sensitive data such as passwords, credit card numbers, or full PII.\n- Use structured logs with consistent fields for easier monitoring.\n- Protect access to logs; they are sensitive assets.\n\nExample safe behavior: on an authentication failure return 'Invalid credentials' rather than 'User not found' vs 'Wrong password' which can reveal user enumeration details.\n\nKey takeaways:\n- Never show stack traces to users in production.\n- Sanitize logs and restrict log access.\n- Include sufficient detail in logs for incident response without exposing secrets.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:01.626Z",
+        "updatedAt": "2025-12-14T14:00:01.626Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b10",
+        "title": "GDPR Basics for Beginners",
+        "description": "Summarize key GDPR concepts relevant to small teams: lawful basis, data subject rights, and basic steps for compliance.",
+        "lessonType": "video",
+        "content": "Transcript/Notes:\nGDPR is a regulation focused on protecting personal data for citizens of the EU/EEA. Important concepts:\n- Lawful basis: you must have a legal reason to process personal data (consent, contract, legal obligation, etc.).\n- Data subject rights: individuals can request access, correction, deletion, and portability of their personal data.\n- Data Protection by Design and by Default: privacy should be built into systems from the start.\n\nSimple compliance steps for small teams:\n1. Document what personal data you collect and why.\n2. Provide clear privacy notices and an easy way to exercise rights.\n3. Use consent where required and keep records of processing activities.\n\nKey takeaways:\n- Even small projects should think about data subjects' rights and document processing activities.\n- When in doubt, minimize collection and protect retained data with security controls.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:02.259Z",
+        "updatedAt": "2025-12-14T14:00:02.259Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b18",
+        "title": "Final Review and Next Steps",
+        "description": "Summarize course learnings, provide a roadmap for continued study, and list practical next steps and resources for further learning.",
+        "lessonType": "text-only",
+        "content": "Final review:\n- You learned the CIA triad, common threats, authentication basics, and how to perform a simple risk assessment.\n- You practiced threat modeling with STRIDE, reduced attack surface, and implemented secure coding patterns like parameterized queries and input validation.\n- You explored basic privacy principles, GDPR concepts, and how to create retention policies.\n\nNext steps and resources:\n1. Practice by reviewing and hardening one small application you own. \n2. Try a free online CTF or security lab focusing on web vulnerabilities.\n3. Study recommended topics next: secure architecture patterns, incident response runbooks, and deeper cryptography.\n\nPractical next actions:\n- Implement one mitigation from your threat model this week.\n- Add automated tests that check for common injection patterns.\n\nThank you for completing the course; keep iterating on security with small, incremental improvements.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:03.800Z",
+        "updatedAt": "2025-12-14T14:00:03.800Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fd8",
+        "title": "Understanding the Data Science Workflow",
+        "description": "Overview of data ingestion, cleaning, exploration, modeling, and evaluation with practical examples of each step.",
+        "lessonType": "text-only",
+        "content": "Data science typically follows a repeatable workflow: 1) Data collection/ingestion (getting CSVs, databases, or APIs), 2) Data cleaning (fixing missing values and inconsistent types), 3) Exploratory Data Analysis (EDA) to understand patterns, 4) Modeling (training algorithms), 5) Evaluation and iteration, and 6) Deployment/monitoring. Example: Given a CSV of sales you would load it, inspect missing data, visualize sales by month, split into train/test, train a simple model, and then evaluate accuracy or error. Short exercise: Write down three potential sources of dirty data you might find in a CSV and how you'd fix them (e.g., missing timestamps -> impute or remove; inconsistent categories -> map to canonical values). This lesson introduces tags/topics covered later: data-analysis, machine-learning, statistics.",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:04.204Z",
+        "updatedAt": "2025-12-14T14:00:04.204Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276aff",
+        "title": "Authentication & Access Control Basics",
+        "description": "Describe authentication, authorization, and role-based access control and provide guidelines for secure credential handling. Learners will understand MFA and session basics.",
+        "lessonType": "video",
+        "content": "Transcript/Notes:\nAuthentication is the process of proving identity. Authorization determines what an authenticated identity may do. Use strong password policies, multi-factor authentication (MFA), and avoid storing plaintext passwords. Store only salted and iterated password hashes.\n\nSession management: use secure cookies with HttpOnly and Secure flags, rotate session identifiers on privilege changes, and set reasonable expiration.\n\nRole-Based Access Control (RBAC): assign users to roles and grant minimum required privileges (principle of least privilege).\n\nKey takeaways:\n- Always hash passwords (e.g., bcrypt, Argon2) and never store plaintext. \n- Enable MFA where possible to reduce account takeover risk. \n- Implement least privilege and segregate duties.\n- Secure session cookies and invalidate sessions on logout.\n\nPractical checklist:\n1. Replace weak password storage with a proper hashing library.\n2. Add an MFA option for critical accounts.\n3. Audit permissions and remove unnecessary admin rights.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T13:59:58.980Z",
+        "updatedAt": "2025-12-14T13:59:58.980Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b00",
+        "title": "Basic Risk Assessment for Beginners",
+        "description": "Teach a simple risk assessment method: identify assets, threats, vulnerabilities, likelihood, and impact so learners can prioritize fixes. Include a small worksheet example.",
+        "lessonType": "text-only",
+        "content": "A simple risk assessment process:\n1. Identify assets: e.g., user data, application code, production database.\n2. Identify threats: e.g., attacker exploiting SQL injection, ransomware, credential theft.\n3. Identify vulnerabilities: e.g., lack of input validation, exposed admin endpoints, weak backups.\n4. Assess likelihood: how probable is exploitation? (low/medium/high).\n5. Assess impact: what would happen if exploited? (low/medium/high).\n6. Prioritize: high likelihood + high impact = urgent fix.\n\nWorksheet example:\nAsset: Production database containing PII.\nThreat: SQL injection exploit.\nVulnerability: Missing parameterized queries in legacy endpoint.\nLikelihood: Medium.\nImpact: High.\nAction: Patch endpoint to use parameterized queries and review logs.\n\nBeginner action items:\n- Create a small table of assets and map one threat and vulnerability to each.\n- Prioritize the top two items and schedule fixes.\n\nThis lightweight method helps teams focus on the highest risk areas without formal risk frameworks.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T13:59:59.187Z",
+        "updatedAt": "2025-12-14T13:59:59.187Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b03",
+        "title": "Introduction to Threat Modeling",
+        "description": "Explain threat modeling goals and how to map a simple system to identify assets, entry points, and trust boundaries. Provide a step-by-step example.",
+        "lessonType": "text-only",
+        "content": "Threat modeling is a structured process for identifying and mitigating threats to a system. Steps:\n1. Define the system and scope: draw a simple diagram of components (clients, server, database, external APIs).\n2. Identify assets: data and services that need protection.\n3. Identify entry points and trust boundaries: where untrusted input crosses into trusted areas.\n4. Enumerate threats using a mnemonic like STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege).\n5. Prioritize and propose mitigations.\n\nExample: a web app that stores user profiles. Entry points: login form, profile upload. Trust boundary: web server to database. Asset: PII in profiles. A threat: file upload allowing arbitrary files could lead to malware or server-side code execution. Mitigation: validate file types, store uploads outside web root, scan files.\n\nPractical exercise: draw a 3-box diagram of a simple web app, label trust boundaries, and list two threats per entry point.",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T13:59:59.804Z",
+        "updatedAt": "2025-12-14T13:59:59.804Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b0a",
+        "title": "Authentication Implementation & Password Storage",
+        "description": "Teach secure password storage and a simple authentication flow. Provide a code example showing hashing with a modern algorithm.",
+        "lessonType": "code",
+        "content": "Never store plaintext passwords. Use a slow, salted hash like bcrypt or Argon2.\n\nPython example using bcrypt:\n`python\nimport bcrypt\n\npassword = b'mysecretpassword'\nsalt = bcrypt.gensalt()\nhashed = bcrypt.hashpw(password, salt)\nprint('Hashed password:', hashed)\n# To check:\nif bcrypt.checkpw(password, hashed):\n    print('Password matches')\n`\n\nAuthentication flow summary:\n1. User submits credentials over TLS. \n2. Server looks up stored hash and checks password with the hashing function. \n3. If valid, issue a session token or signed JWT with a short expiry and store minimal user state server-side.\n\nBest practices: use proven libraries, add MFA for sensitive accounts, and implement throttling on login attempts.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:01.236Z",
+        "updatedAt": "2025-12-14T14:00:01.236Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b15",
+        "title": "Build a Secure Web Form (Code Workshop)",
+        "description": "Hands-on example: an HTML form with server-side validation and CSRF protection. Includes frontend and backend snippets you can run locally.",
+        "lessonType": "code",
+        "content": "This workshop provides a minimal secure form and server example.\n\nHTML form (index.html):\n`html\n<!doctype html>\n<html>\n  <body>\n    <form method=\"post\" action=\"/submit\">\n      <input name=\"name\" required maxlength=\"100\" />\n      <input name=\"email\" type=\"email\" required />\n      <input type=\"hidden\" name=\"csrfToken\" value=\"{{CSRF_TOKEN}}\" />\n      <button type=\"submit\">Submit</button>\n    </form>\n  </body>\n</html>\n`\n\nExpress.js server with CSRF check and validation:\n``javascript\nconst express = require('express')\nconst bodyParser = require('body-parser')\nconst app = express()\napp.use(bodyParser.urlencoded({ extended: false }))\n\n// Simple CSRF token for demo (replace with real library in production)\nfunction generateToken() { return 'demo-token' }\n\napp.get('/', (req, res) => {\n  const token = generateToken()\n  res.send(`<form method=\"post\" action=\"/submit\"><input name=\"name\" /><input name=\"email\" /><input type=\"hidden\" name=\"csrfToken\" value=\"${token}\" /><button>Submit</button></form>`)\n})\n\napp.post('/submit', (req, res) => {\n  const { name, email, csrfToken } = req.body\n  if (csrfToken !== 'demo-token') return res.status(403).send('Invalid CSRF token')\n  if (!name || typeof name !== 'string' || name.length > 100) return res.status(400).send('Invalid name')\n  if (!email || !/^\\S+@\\S+\\.\\S+$/.test(email)) return res.status(400).send('Invalid email')\n  res.send('Form submitted')\n})\n\napp.listen(3000)\n``\n\nExercise: run the server locally, submit the form, and then modify the server to use a proper CSRF library and store tokens per session.",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:03.109Z",
+        "updatedAt": "2025-12-14T14:00:03.109Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fdf",
+        "title": "Exploratory Data Analysis (EDA) Techniques",
+        "description": "How to ask questions of your data, detect outliers, handle missingness, and prepare visuals that reveal insights.",
+        "lessonType": "text-only",
+        "content": "EDA is iterative: inspect distributions, check relationships between variables, and search for anomalies. Techniques: 1) Histograms to view distribution; 2) Boxplots to detect outliers; 3) Scatter plots for relationships; 4) Value counts for categorical distributions; 5) Missingness heatmap to find columns with many missing values. Example: If histogram of 'sale_amount' is heavily skewed, consider log-transform before modeling. Short practical exercise: create a checklist of 5 EDA plots you will generate for any numeric dataset.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:05.535Z",
+        "updatedAt": "2025-12-14T14:00:05.535Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe0",
+        "title": "Visualization with Matplotlib and Seaborn",
+        "description": "Hands-on plotting examples: histogram, scatter plot with trendline, and bar charts using Matplotlib and Seaborn.",
+        "lessonType": "code",
+        "content": "The code below creates common plots. Run in Jupyter to see visuals.\n\npython\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ndf = pd.read_csv('data/sales.csv')\n\n# Histogram of sale_amount\nplt.figure()\nplt.hist(df['sale_amount'].dropna(), bins=30)\nplt.title('Sale Amount Distribution')\nplt.xlabel('Sale Amount')\nplt.ylabel('Frequency')\nplt.show()\n\n# Scatter with trendline: price vs units_sold\nplt.figure()\nsns.regplot(x='price', y='units_sold', data=df, scatter_kws={'alpha':0.5})\nplt.title('Price vs Units Sold')\nplt.show()\n\n# Bar: top 10 products by total sales\ntop = df.groupby('product_id')['sale_amount'].sum().nlargest(10)\nplt.figure()\ntop.plot(kind='bar')\nplt.title('Top 10 Products by Sales')\nplt.ylabel('Total Sales')\nplt.show()\n\n\nExercise: Create these three plots for your dataset and write one sentence for each explaining what you learned.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:05.741Z",
+        "updatedAt": "2025-12-14T14:00:05.741Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe7",
+        "title": "Correlation, Covariance and Feature Relationships",
+        "description": "Understand covariance and correlation, their interpretation, and limits (correlation != causation).",
+        "lessonType": "code",
+        "content": "This code computes covariance and correlation and shows a simple check for spurious correlation.\n\npython\nimport pandas as pd\nimport numpy as np\n\n# Example synthetic data\nnp.random.seed(0)\nx = np.random.normal(size=100)\ny = 2 * x + np.random.normal(scale=0.5, size=100)\n\ndf = pd.DataFrame({'x': x, 'y': y})\nprint('Covariance matrix:\\n', df.cov())\nprint('Correlation matrix:\\n', df.corr())\n\n# Example of spurious correlation: unrelated series that correlate by chance\nz = np.random.normal(size=100)\ndf['z'] = z\nprint('Correlation with z:', df.corr()['z'])\n\n# Exercise: compute correlation between price and units_sold in your dataset and interpret sign and magnitude\n\n\nExercise: Run this example, then compute correlations in your real dataset and describe one strong positive and one negative relationship if present.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:07.073Z",
+        "updatedAt": "2025-12-14T14:00:07.073Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5ff0",
+        "title": "Train/Test Split, Cross-Validation and Validation Strategy",
+        "description": "Explain holdout validation, k-fold cross-validation, and when to use each to estimate model generalization.",
+        "lessonType": "text-only",
+        "content": "Holdout method: split data into train and test sets (e.g., 80/20). Cross-validation (k-fold) gives more stable estimates by rotating train/test folds. Use time-series split when data is temporal to avoid leakage. Example: for small datasets use 5-fold CV to reduce variance in performance estimates. Short exercise: implement a simple k-fold scheme using scikit-learn's cross_val_score (see code lessons).",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:08.713Z",
+        "updatedAt": "2025-12-14T14:00:08.713Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5ff3",
+        "title": "End-to-End Mini Project: Build, Evaluate, and Report",
+        "description": "A runnable Python notebook that walks through loading data, EDA, feature creation, training a model, evaluating it, and saving results.",
+        "lessonType": "code",
+        "content": "This code outlines an end-to-end workflow you should run and adapt for your dataset.\n\npython\n# End-to-end skeleton\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split, cross_val_score\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.metrics import mean_squared_error\n\n# 1) Load data\ndf = pd.read_csv('data/cleaned_sales.csv')\n\n# 2) Quick EDA (example)\nprint(df.describe())\n\n# 3) Feature selection\nfeatures = ['price', 'units_sold']\nX = df[features].fillna(0)\ny = df['sale_amount'].fillna(0)\n\n# 4) Train/test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n# 5) Train model\nmodel = RandomForestRegressor(n_estimators=50, random_state=42)\nmodel.fit(X_train, y_train)\n\n# 6) Evaluate\npreds = model.predict(X_test)\nrmse = mean_squared_error(y_test, preds) ** 0.5\nprint('Test RMSE:', rmse)\n\n# 7) Cross-validation\ncv_scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')\nprint('CV RMSE mean:', ( -cv_scores.mean() ) ** 0.5)\n\n# 8) Save model (example)\nimport joblib\njoblib.dump(model, 'models/random_forest_sales.joblib')\nprint('Model saved to models/random_forest_sales.joblib')\n\n\nExercise: Run this end-to-end example and produce a one-paragraph report that answers: What was the model's RMSE, which features were most important, and what next steps would you take to improve performance?",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:09.428Z",
+        "updatedAt": "2025-12-14T14:00:09.428Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe6",
+        "title": "Common Distributions and Hypothesis Testing",
+        "description": "Learn the normal, binomial, and Poisson distributions and the basics of hypothesis testing (p-values, null hypothesis).",
+        "lessonType": "video",
+        "content": "Transcript/Notes: We'll cover the normal distribution (bell shape, central limit theorem), binomial (success/failure counts), and Poisson (counts per interval). Hypothesis testing: define null/alternative, compute a test statistic and p-value, and decide whether to reject the null at a chosen significance level. Example: test whether average daily sales differs from 100 using a t-test. Key takeaways: p-value is not the probability the null is true—it's the probability of the observed data assuming the null. Exercise: for a small sample, compute a simple t-test using Python (see later code lessons).",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:06.868Z",
+        "updatedAt": "2025-12-14T14:00:06.868Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5ff1",
+        "title": "Evaluation Metrics: Regression and Classification",
+        "description": "Compute and interpret MSE, RMSE, MAE for regression and accuracy, precision, recall, F1, ROC-AUC for classification.",
+        "lessonType": "code",
+        "content": "Examples show how to compute metrics in scikit-learn and interpret results.\n\npython\nfrom sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score, precision_score, recall_score, f1_score, roc_auc_score\n\n# Regression example\n# y_true, y_pred are arrays from your model\n# mse = mean_squared_error(y_true, y_pred)\n# rmse = mse ** 0.5\n# mae = mean_absolute_error(y_true, y_pred)\n\n# Classification example\n# accuracy = accuracy_score(y_true_class, y_pred_class)\n# precision = precision_score(y_true_class, y_pred_class)\n# recall = recall_score(y_true_class, y_pred_class)\n# f1 = f1_score(y_true_class, y_pred_class)\n# auc = roc_auc_score(y_true_class, y_pred_probs)\n\nprint('Use RMSE to interpret error in the same units as the target; use MAE for robustness to outliers.')\n\n\nExercise: Compute RMSE and MAE for your regression model and explain which you prefer and why.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:08.915Z",
+        "updatedAt": "2025-12-14T14:00:08.915Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5ff2",
+        "title": "Model Selection, Overfitting and Regularization",
+        "description": "Video explanation of bias-variance tradeoff, common signs of overfitting, and simple regularization techniques (L1/L2).",
+        "lessonType": "video",
+        "content": "Transcript/Notes: Overfitting occurs when a model learns noise rather than signal, showing low training error but high test error. Underfitting shows high error on both. Regularization (L1/L2) penalizes large weights to reduce overfitting. Practical steps: simplify model, gather more data, use regularization, and use cross-validation to detect overfitting. Example: compare train and validation errors across polynomial degrees to observe the tradeoff. Key takeaways: always compare train and validation performance, prefer simpler models early, and use regularization to control complexity.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:09.118Z",
+        "updatedAt": "2025-12-14T14:00:09.118Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b09",
+        "title": "Input Validation and Sanitization (Code)",
+        "description": "Show how to validate and sanitize user input on server side with examples in JavaScript and Python, and explain why client-side validation is insufficient.",
+        "lessonType": "code",
+        "content": "Server-side validation is mandatory even when client-side checks exist.\n\nNode.js example (express) validating numeric and string fields:\n`javascript\nconst express = require('express')\nconst app = express()\napp.use(express.json())\n\napp.post('/order', (req, res) => {\n  const { quantity, productId } = req.body\n  if (!Number.isInteger(quantity) || quantity <= 0) return res.status(400).send('Invalid quantity')\n  if (typeof productId !== 'string' || productId.length > 50) return res.status(400).send('Invalid productId')\n  // proceed safely\n  res.send({ status: 'ok' })\n})\n\napp.listen(3000)\n`\n\nPython example using simple sanitization:\n`python\nimport re\n\ndef sanitize_filename(name):\n    # remove directory traversal and unsafe chars\n    name = re.sub(r'[^a-zA-Z0-9_.-]', '_', name)\n    name = name[:100]\n    return name\n\nprint(sanitize_filename('../../etc/passwd'))\n`\n\nBest practices: whitelist expected formats, normalize inputs, and reject or sanitize unexpected characters.\n",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:00.931Z",
+        "updatedAt": "2025-12-14T14:00:00.931Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b0f",
+        "title": "Data Privacy Principles and Personal Data",
+        "description": "Define personal data, explain data protection principles (collection limitation, purpose limitation, data minimization), and give examples of implementation.",
+        "lessonType": "text-only",
+        "content": "Core privacy principles:\n- Collection limitation: only collect what you need.\n- Purpose limitation: collect data for a specific, communicated purpose.\n- Data minimization: store the minimum data necessary and for the shortest time required.\n- Accuracy and integrity: keep personal data up to date.\n- Security safeguards: protect data with appropriate security measures.\n\nExample: If you only need an email to verify an account, do not collect birthdate or home address. If you need logs for debugging, redact or pseudonymize identifiers.\n\nBeginner actions:\n- Map data fields collected in registration forms and justify each field.\n- Remove or hide optional fields that are not necessary for core functionality.\n\nUnderstanding personal data helps you prioritize protections where they matter most.",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:02.055Z",
+        "updatedAt": "2025-12-14T14:00:02.055Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b17",
+        "title": "Compliance Checklist and Practical Steps",
+        "description": "Provide a simple compliance checklist covering secure storage, access control, incident response basics, and documentation required for audits.",
+        "lessonType": "video",
+        "content": "Transcript/Notes:\nA basic compliance checklist for small projects:\n- Document processing activities and data flows.\n- Classify data and apply controls based on sensitivity.\n- Ensure secure password storage and authentication controls.\n- Maintain an incident response plan with roles and contact lists.\n- Keep audit logs and protect log integrity.\n- Ensure data retention and deletion policies are implemented.\n\nPractical preparation for audits:\n1. Gather evidence: configuration screenshots, policies, and code snippets showing controls.\n2. Demonstrate you followed privacy-by-design and have a remediation plan for identified risks.\n\nKey takeaways:\n- Compliance is a combination of technical controls and documented processes.\n- Start small: basic documentation and consistent controls go a long way.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:03.593Z",
+        "updatedAt": "2025-12-14T14:00:03.593Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fdb",
+        "title": "First Hands-on: Load and Inspect Data with Python",
+        "description": "A beginner-friendly Python example loading a CSV with pandas, inspecting rows, and performing simple cleaning steps.",
+        "lessonType": "code",
+        "content": "This code demonstrates loading a CSV, checking data types, handling missing values, and saving a cleaned sample. Copy into a file or Jupyter cell and run.\n\npython\nimport pandas as pd\n\n# Load CSV\ndf = pd.read_csv('data/sample_sales.csv')\n\n# Inspect\nprint('Rows,Cols:', df.shape)\nprint(df.head())\nprint(df.dtypes)\n\n# Simple validation and cleaning\n# 1) Remove rows with missing 'sale_amount'\ndf = df[df['sale_amount'].notna()]\n\n# 2) Convert date column to datetime\nif 'sale_date' in df.columns:\n df['sale_date'] = pd.to_datetime(df['sale_date'], errors='coerce')\n\n# 3) Fix negative values in sale_amount by setting to absolute (example strategy)\ndf['sale_amount'] = df['sale_amount'].apply(lambda x: abs(x) if pd.notna(x) else x)\n\n# Save cleaned sample\ndf.head(100).to_csv('data/cleaned_sample.csv', index=False)\nprint('Cleaned sample saved.')\n\n\nExercise: Run this on a small CSV and inspect the cleaned_sample.csv file. Practice changing one cleaning rule and observe results.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:04.819Z",
+        "updatedAt": "2025-12-14T14:00:04.819Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe5",
+        "title": "Probability Basics and Conditional Probability",
+        "description": "Understand basic probability concepts, conditional probability, and the idea of independence with simple examples.",
+        "lessonType": "text-only",
+        "content": "Probability measures how likely an event is (0 to 1). Conditional probability P(A|B) is the probability of A given B. Independence means P(A|B)=P(A). Example: If 30% of customers buy Product A and among those who saw an ad 50% buy A, P(buy|ad)=0.5. Short exercise: For a deck of cards, compute P(ace) and P(ace|red). Explanation: P(ace)=4/52, P(ace|red)=2/26=1/13.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:06.560Z",
+        "updatedAt": "2025-12-14T14:00:06.560Z",
+        "__v": 0
+      },
+      {
+        "_id": "693ec31dbcc34e9c4fba1c36",
+        "title": "Environment Setup",
+        "description": "Install VS Code and Node.js",
+        "lessonType": "text-only",
+        "content": "Install VS Code and Node.js to begin.",
+        "order": 1,
+        "hasQuiz": false,
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:01.470Z",
+        "updatedAt": "2025-12-14T14:01:01.470Z"
+      },
+      {
+        "_id": "693ec31dbcc34e9c4fba1c35",
+        "title": "Welcome",
+        "description": "Course overview",
+        "lessonType": "text-only",
+        "content": "Welcome to the course!",
+        "order": 0,
+        "hasQuiz": false,
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:01.470Z",
+        "updatedAt": "2025-12-14T14:01:01.470Z"
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b04",
+        "title": "STRIDE: A Practical Walkthrough",
+        "description": "Cover STRIDE categories with examples and mitigations for each, showing how to apply the model to common scenarios.",
+        "lessonType": "video",
+        "content": "Transcript/Notes:\nSTRIDE stands for Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege. For each: \n- Spoofing: attacker impersonates another user; mitigate with strong authentication and MFA.\n- Tampering: malicious modification of data; mitigate with input validation and integrity checks.\n- Repudiation: lack of evidence about actions; mitigate with logging and non-repudiation mechanisms.\n- Information disclosure: data leaks; mitigate with encryption and access control.\n- Denial of service: service unavailability; mitigate with rate limiting and redundancy.\n- Elevation of privilege: gaining higher access; mitigate with role separation and secure defaults.\n\nKey takeaways:\n- Use STRIDE to systematically think about threats.\n- Each threat requires a specific mitigation; don't rely on a single control.\n\nShort example: for a file upload endpoint, STRIDE reveals tampering (uploading a malicious file), information disclosure (sensitive file exposed), and elevation of privilege (uploading a web shell). Apply file validation, storage isolation, and permission restrictions.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:00.005Z",
+        "updatedAt": "2025-12-14T14:00:00.005Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b05",
+        "title": "Attack Surface Analysis",
+        "description": "Teach methods to list and shrink an application's attack surface by removing or securing unnecessary components and endpoints.",
+        "lessonType": "text-only",
+        "content": "Attack surface = all points where an attacker can interact with your system. Steps to analyze and reduce it:\n1. Inventory endpoints, services, and open ports. \n2. Remove unused features and services. \n3. Harden remaining interfaces: implement authentication, input validation, and rate limiting.\n4. Minimize exposed data and privileges.\n\nExample actions: disable unused API endpoints, close management ports to public networks, and move admin panels behind VPNs. For third-party integrations, restrict scopes and rotate API keys.\n\nBeginner checklist:\n- Run a simple port scan on your test environment to see open services.\n- Turn off debug or development features in production.\n- Centralize and minimize exposed APIs and only accept necessary input types.\n\nReducing attack surface is the most cost-effective way to lower risk for small teams.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:00.250Z",
+        "updatedAt": "2025-12-14T14:00:00.250Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b0b",
+        "title": "Encryption Basics: Data at Rest and in Transit",
+        "description": "Explain encryption primitives, TLS for transport, and a simple example of symmetric encryption for small secrets. Clarify key management basics.",
+        "lessonType": "text-only",
+        "content": "Encryption fundamentals:\n- Symmetric encryption uses a single shared key (e.g., AES) and is efficient for encrypting stored data. \n- Asymmetric encryption uses public/private keys (e.g., RSA, ECC) and is used for key exchange and signatures.\n- TLS (Transport Layer Security) protects data in transit between clients and servers; always use TLS in production.\n\nSimple symmetric encryption example conceptually: use a library that handles padding, IVs, and safe modes (GCM or CBC with HMAC). Do not write crypto primitives yourself.\n\nKey management basics:\n- Keep keys out of source code; use environment variables, vaults, or KMS services.\n- Rotate keys periodically and have a plan to re-encrypt sensitive data.\n\nBeginner actions:\n- Enable TLS with a valid certificate for web services.\n- Use vetted libraries for encryption and store keys securely.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:01.439Z",
+        "updatedAt": "2025-12-14T14:00:01.439Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b11",
+        "title": "Data Minimization and Retention Policies",
+        "description": "Explain how to create simple retention policies and practical steps to minimize stored personal data and handle deletion requests.",
+        "lessonType": "text-only",
+        "content": "Retention policy steps:\n1. Identify data categories and the purpose for which they are kept.\n2. Set retention periods that are justified by business needs or law.\n3. Implement automated deletion or archiving where possible.\n4. Document the policy and train staff to follow it.\n\nExample: Keep login metadata for 90 days for security monitoring, but purge IP addresses older than that unless needed for an investigation. For deletion requests, remove data from primary storage and mark backups for eventual purge or follow your documented backup retention schedule.\n\nTechnical tips: use flags or soft-delete patterns plus a background job that permanently deletes data after the retention window. Ensure deletion flows also remove caches and search indexes where applicable.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:02.568Z",
+        "updatedAt": "2025-12-14T14:00:02.568Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b12",
+        "title": "Privacy by Design: Practical Example (Code)",
+        "description": "Show a small code example demonstrating pseudonymization and conditional logging so personal identifiers are not stored in logs.",
+        "lessonType": "code",
+        "content": "Example: pseudonymize an identifier before logging and store mapping in a protected store.\n\nNode.js example using a simple hash for pseudonymization:\n`javascript\nconst crypto = require('crypto')\n\nfunction pseudonymize(id) {\n  // use HMAC with a server-side secret (do not hardcode in source)\n  const secret = process.env.PSEUDO_SECRET || 'change-me'\n  return crypto.createHmac('sha256', secret).update(id).digest('hex')\n}\n\n// Usage in request handling\nfunction handleRequest(req, res) {\n  const userId = req.body.userId\n  const pseudo = pseudonymize(userId)\n  // Log pseudonym instead of raw ID\n  console.log({ event: 'login', user: pseudo })\n  res.send({ status: 'ok' })\n}\n`\n\nNotes: The secret must be kept securely. Pseudonymization reduces exposure of personal data in logs and analytics while still enabling grouping behavior for debugging or metrics.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:02.748Z",
+        "updatedAt": "2025-12-14T14:00:02.748Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fd9",
+        "title": "Data Types, Formats and Basic Validation",
+        "description": "Learn common data types (numeric, categorical, datetime) and formats (CSV, JSON, Parquet), plus simple validation checks to ensure data quality.",
+        "lessonType": "text-only",
+        "content": "Data types: numeric (integers, floats), categorical (labels), text, datetime, and boolean. Common file formats: CSV (plain text, widely used), JSON (nested), and Parquet (columnar, efficient). Validation checks: 1) Schema check: confirm expected columns and types; 2) Range checks: numeric values within expected range; 3) Uniqueness checks: IDs are unique; 4) Missingness check: percent of missing values per column. Example: If 'age' column has negative values, that's a validation failure. Short exercise: For a 'sales' dataset list 3 validation rules you would implement before modeling (e.g., sale_date not null, sale_amount >= 0, product_id exists in lookup table).",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:04.393Z",
+        "updatedAt": "2025-12-14T14:00:04.393Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fde",
+        "title": "Using pandas for Analysis",
+        "description": "Practical examples of pandas operations: groupby, aggregations, pivoting, and concise data summaries.",
+        "lessonType": "code",
+        "content": "Examples below show common pandas operations to summarize and group data. Run these in a notebook.\n\npython\nimport pandas as pd\n\n# Load\ndf = pd.read_csv('data/sales.csv')\n\n# Summary statistics\nprint(df.describe(include='all'))\n\n# Group by product and compute total sales\nsales_by_product = df.groupby('product_id')['sale_amount'].sum().reset_index()\nprint(sales_by_product.head())\n\n# Pivot example: monthly sales\nif 'sale_date' in df.columns:\n df['month'] = pd.to_datetime(df['sale_date']).dt.to_period('M')\n monthly = df.groupby('month')['sale_amount'].sum()\n print(monthly.tail())\n\n# Short exercise: compute average sale amount per customer and sort descending\navg_by_customer = df.groupby('customer_id')['sale_amount'].mean().sort_values(ascending=False)\nprint(avg_by_customer.head())\n\n\nPractice: Run these commands and change groupings to answer a business question like 'Which product had the highest average sale?'",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:05.233Z",
+        "updatedAt": "2025-12-14T14:00:05.233Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fec",
+        "title": "Classification Basics: Logistic Regression",
+        "description": "Train a logistic regression classifier, inspect probabilities, and compute accuracy and confusion matrix.",
+        "lessonType": "code",
+        "content": "This example shows a simple binary classification using scikit-learn.\n\npython\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import accuracy_score, confusion_matrix\n\n# Synthetic example or load labeled data\nimport numpy as np\nnp.random.seed(0)\nX = np.random.randn(200, 2)\ny = (X[:, 0] + X[:, 1] + np.random.randn(200)*0.5 > 0).astype(int)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmodel = LogisticRegression()\nmodel.fit(X_train, y_train)\nprobs = model.predict_proba(X_test)[:,1]\npreds = model.predict(X_test)\n\nprint('Accuracy:', accuracy_score(y_test, preds))\nprint('Confusion matrix:\\n', confusion_matrix(y_test, preds))\n\n\nExercise: For a real binary label in your dataset, compute precision and recall in addition to accuracy.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:08.096Z",
+        "updatedAt": "2025-12-14T14:00:08.096Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276afd",
+        "title": "Understanding the CIA Triad",
+        "description": "Explain Confidentiality, Integrity, and Availability and how each applies to systems and data. Provide concrete examples that show how a breach of each impacts real applications.",
+        "lessonType": "text-only",
+        "content": "The CIA triad is a foundational model in cybersecurity.\n\nConfidentiality ensures information is only accessible to authorized users. Example: encrypting sensitive user data at rest and in transit prevents unauthorized reading. Integrity ensures information remains accurate and unaltered unless by an authorized process. Example: using checksums, digital signatures, or database constraints to detect tampering. Availability ensures systems and data are accessible when needed. Example: redundancy and backups protect against outages and denial-of-service attacks.\n\nPractical steps for beginners:\n1. Identify where sensitive data is stored and transmitted. Apply basic encryption or access controls. \n2. Use simple integrity checks (hashes) when transferring important files. \n3. Plan basic backup and recovery procedures to keep services available.\n\nTerms explained: encryption (transforming data so only authorized parties can read it), hashing (one-way transformation used for integrity checks), and authentication (verifying identity).",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T13:59:58.498Z",
+        "updatedAt": "2025-12-14T13:59:58.498Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276b06",
+        "title": "Secure Design Patterns (Example Code)",
+        "description": "Demonstrate a few secure design patterns with code examples: parameterized queries for DB access and input validation middleware for web apps.",
+        "lessonType": "code",
+        "content": "This lesson shows two runnable examples.\n\n1) Parameterized SQL query in Python using sqlite3 to avoid SQL injection:\n`python\nimport sqlite3\n\nconn = sqlite3.connect(':memory:')\ncur = conn.cursor()\ncur.execute('CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, email TEXT)')\n# Unsafe (do not do):\n# cur.execute(\"SELECT * FROM users WHERE name = '%s'\" % user_input)\n\n# Safe parameterized query:\nuser_input = 'alice'\ncur.execute('SELECT * FROM users WHERE name = ?', (user_input,))\nrows = cur.fetchall()\nprint('Rows:', rows)\n`\n\n2) Simple Express.js input validation middleware (Node.js) to normalize and validate input:\n`javascript\nconst express = require('express')\nconst app = express()\napp.use(express.json())\n\nfunction validateProfile(req, res, next) {\n  const { name, email } = req.body\n  if (!name || typeof name !== 'string' || name.length > 100) return res.status(400).send('Invalid name')\n  // Basic email pattern check\n  if (!email || !/^\\S+@\\S+\\.\\S+$/.test(email)) return res.status(400).send('Invalid email')\n  next()\n}\n\napp.post('/profile', validateProfile, (req, res) => {\n  // safe to use validated fields\n  res.status(201).send({ status: 'ok' })\n})\n\napp.listen(3000)\n`\n\nNotes: Always prefer framework-provided parameter binding and validation libraries in production. The examples are runnable and illustrate core secure patterns.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:00.520Z",
+        "updatedAt": "2025-12-14T14:00:00.520Z",
+        "__v": 0
+      },
+      {
+        "_id": "69378a0dbb5e481ff3276b16",
+        "title": "Threat Modeling Workshop",
+        "description": "Guided exercise: produce a threat model for a sample web app, list top 5 threats, and propose concrete mitigations with priority.",
+        "lessonType": "text-only",
+        "content": "Workshop steps:\n1. Define the sample app: a basic web app with user registration, file uploads, and an admin panel.\n2. Draw a simple data flow diagram: user -> web server -> application logic -> database, with an external payment API.\n3. Identify threats using STRIDE and map them to entry points.\n\nExample top threats and mitigations:\n- File upload allows remote code execution. Mitigation: validate file type, store outside web root, run virus scans.\n- Admin panel exposed to internet leading to brute force. Mitigation: restrict access via IP or VPN and enable MFA.\n- Payment API keys leaked in source control. Mitigation: move keys to a secrets manager and rotate keys.\n- SQL injection on legacy endpoint. Mitigation: parameterize queries and add input validation.\n- Sensitive data retention longer than needed. Mitigation: implement retention policy and automated deletion.\n\nDeliverable: produce a one-page threat model listing the top 5 threats, their likelihood and impact, and the top mitigation for each.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:03.385Z",
+        "updatedAt": "2025-12-14T14:00:03.385Z",
+        "__v": 0
+      },
+      {
+        "_id": "693ec31ebcc34e9c4fba1c3a",
+        "title": "CSS Essentials",
+        "description": "Selectors and layout.",
+        "lessonType": "text-only",
+        "content": "CSS selectors, box model, and flexbox intro.",
+        "order": 1,
+        "hasQuiz": false,
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:02.062Z",
+        "updatedAt": "2025-12-14T14:01:02.062Z"
+      },
+      {
+        "_id": "69378a0cbb5e481ff3276afe",
+        "title": "Common Threat Vectors",
+        "description": "Introduce common ways attackers target systems including phishing, malware, injection, misconfiguration, and social engineering. Provide examples and early detection signals.",
+        "lessonType": "text-only",
+        "content": "Common threat vectors are the primary ways attackers reach systems:\n\n1. Phishing: attackers trick users into revealing credentials via email or fake sites. Example: a user clicks a link that mimics a bank login page.\n2. Malware: software that performs malicious actions once executed, such as ransomware encrypting files.\n3. Injection attacks: attackers send unexpected input to exploit application logic (e.g., SQL injection). Example detection: unexpected query parameters or errors revealing database structure.\n4. Misconfiguration: default credentials, open ports, or public storage buckets left exposed.\n5. Social engineering: manipulation of users to reveal secrets or perform actions.\n\nActionable beginner steps:\n- Use strong, unique passwords and enable multi-factor authentication.\n- Keep software patched and remove unused services.\n- Validate and sanitize input on the server side to prevent injection.\n- Review cloud and server configurations for exposed resources.\n\nSimple examples: check server logs for unusual POST requests, monitor outbound traffic spikes, and educate users on phishing signs (unexpected attachments, urgent requests, mismatched domains).",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T13:59:58.777Z",
+        "updatedAt": "2025-12-14T13:59:58.777Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fda",
+        "title": "Tools, Environments and a JavaScript Quick Start",
+        "description": "Introduce Python, Jupyter, and a short JavaScript example for simple CSV parsing to show multiple environments you might use.",
+        "lessonType": "video",
+        "content": "Transcript/Notes: In this video we show how to set up a Python environment (installing Python, pip, and Jupyter Notebook) and a brief JavaScript environment (Node.js) for lightweight data tasks. We'll demonstrate starting a notebook, installing pandas, and running a quick CSV parse in JavaScript. Key takeaways: use Jupyter for interactive analysis, use virtual environments to isolate packages, and use Node.js for small CSV tasks if preferred.\n\nExample JS snippet (run with Node.js):\n\njavascript\n// Save as parse_csv.js and run: node parse_csv.js\nconst fs = require('fs');\nconst csv = fs.readFileSync('data.csv', 'utf8');\nconst rows = csv.trim().split(String.fromCharCode(10));\nconst headers = rows.shift().split(',');\nconst first = rows[0].split(',');\nconsole.log('Headers:', headers);\nconsole.log('First row sample:', first);\n\n\nExercise: Try starting a Jupyter notebook and run a simple print('Hello, data') to confirm your environment. Key takeaways: set up tools first, confirm installation, and use small scripts to inspect files.",
+        "order": 2,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:04.614Z",
+        "updatedAt": "2025-12-14T14:00:04.614Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe1",
+        "title": "Practical EDA: From Question to Insight",
+        "description": "A short video guide walking through an end-to-end EDA example: define a question, explore data, visualize, and derive a clear insight.",
+        "lessonType": "video",
+        "content": "Transcript/Notes: We'll answer the question: 'Which region has the highest average sale per transaction?' Steps: 1) Filter and clean data 2) Group by region and compute averages 3) Visualize with a bar chart 4) Interpret results and check for confounders (e.g., product mix). Key takeaways: start with a clear question, use grouped statistics + visualization, and always verify if an apparent pattern is caused by data imbalance. Short exercise: pick a business question for your dataset and list the 3 plots you'd create to answer it.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:05.946Z",
+        "updatedAt": "2025-12-14T14:00:05.946Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fe4",
+        "title": "Descriptive Statistics Explained",
+        "description": "Mean, median, mode, variance, standard deviation, and when to use each; practical examples and intuition.",
+        "lessonType": "text-only",
+        "content": "Definitions and intuition: Mean is the average, median is the middle value robust to outliers, mode is the most frequent value. Variance measures spread; standard deviation is its square root. Example: If sales have a mean of 100 and sd of 50, most values are within 50-150 (roughly). Robust measures for skewed data: median and IQR. Short exercise: compute mean and median for a small skewed list [2, 3, 3, 4, 50] and note which better represents the 'typical' value.",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:06.357Z",
+        "updatedAt": "2025-12-14T14:00:06.357Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fea",
+        "title": "Supervised vs Unsupervised Learning",
+        "description": "Differentiate between supervised and unsupervised learning tasks with beginner-friendly examples and use cases.",
+        "lessonType": "text-only",
+        "content": "Supervised learning uses labeled data to predict a target (e.g., predict house price). Unsupervised learning finds structure without labels (e.g., clustering customers). Examples: regression, classification (supervised); clustering, dimensionality reduction (unsupervised). Practical tip: start with supervised tasks when you have a clear target metric. Exercise: Given a sales dataset, name one supervised and one unsupervised problem you could try.",
+        "order": 0,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:07.587Z",
+        "updatedAt": "2025-12-14T14:00:07.587Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5feb",
+        "title": "Simple Linear Regression with scikit-learn",
+        "description": "Train a linear regression model, inspect coefficients, and compute mean squared error on a train/test split.",
+        "lessonType": "code",
+        "content": "This runnable example trains a linear regression model to predict a numeric target.\n\npython\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Load cleaned data\ndf = pd.read_csv('data/cleaned_sales.csv')\n\n# Example features and target\nX = df[['price', 'units_sold']].fillna(0)\ny = df['sale_amount'].fillna(0)\n\n# Train/test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n# Train\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n\n# Inspect coefficients\nprint('Coefficients:', model.coef_)\nprint('Intercept:', model.intercept_)\n\n# Predict and evaluate\npreds = model.predict(X_test)\nmse = mean_squared_error(y_test, preds)\nprint('Test MSE:', mse)\n\n\nExercise: Modify features to include a log-transformed price and observe changes in MSE.",
+        "order": 1,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:07.891Z",
+        "updatedAt": "2025-12-14T14:00:07.891Z",
+        "__v": 0
+      },
+      {
+        "_id": "6938b43ca0463aff68bb5fed",
+        "title": "Feature Engineering Basics",
+        "description": "Simple techniques for creating useful features: encoding categories, scaling, date features, and basic interaction terms.",
+        "lessonType": "text-only",
+        "content": "Feature engineering transforms raw data into features better suited for modeling. Techniques: 1) One-hot or ordinal encoding for categorical variables; 2) Scaling (standardize or normalize) for numeric features used in distance-based models; 3) Extracting date features (year, month, day, weekday); 4) Interaction terms (e.g., price * units_sold). Example: convert product_category into one-hot vectors before training. Short exercise: pick one categorical column and write a plan to encode it and justify the choice.",
+        "order": 3,
+        "hasQuiz": false,
+        "createdAt": "2025-12-14T14:00:08.300Z",
+        "updatedAt": "2025-12-14T14:00:08.300Z",
+        "__v": 0
+      },
+      {
+        "_id": "693ec31ebcc34e9c4fba1c39",
+        "title": "HTML Essentials",
+        "description": "Tags, elements, and structure.",
+        "lessonType": "text-only",
+        "content": "HTML basics: headings, paragraphs, lists.",
+        "order": 0,
+        "hasQuiz": false,
+        "__v": 0,
+        "createdAt": "2025-12-14T14:01:02.062Z",
+        "updatedAt": "2025-12-14T14:01:02.062Z"
+      }
+    ]
+  },
+  {
+    "name": "platformsettings",
+    "documents": [
+      {
+        "_id": "693b62a6365fcac687a9a229",
+        "platformSharePercent": 30,
+        "createdAt": "2025-12-12T00:32:38.187Z",
+        "updatedAt": "2025-12-12T00:32:38.187Z",
+        "__v": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,177 @@
+Course Creation Template
+
+1. Basic Course Information
+-------------------------
+Course Title: [Enter your course title]
+Course Description: [Provide a detailed description of your course]
+Category: [Select category: Programming/Design/Business/etc.]
+Level: [Select: Beginner/Intermediate/Advanced]
+Duration: [Estimated total course duration, e.g., "6 hours"]
+Price: [Set price or mark as Free]
+Prerequisites: [List any required prerequisites]
+Target Audience: [Describe who this course is for]
+
+2. Learning Outcomes
+------------------
+By the end of this course, students will be able to:
+□ [Learning outcome 1]
+□ [Learning outcome 2]
+□ [Learning outcome 3]
+
+3. Course Structure
+-----------------
+MODULE 1: [Module Title]
+Duration: [Module duration]
+
+Learning Objectives:
+□ [Objective 1]
+□ [Objective 2]
+□ [Objective 3]
+
+Lessons:
+1.1. [Lesson Title]
+    Type: [Text/Video/Code/Quiz]
+    Duration: [Lesson duration]
+    Content: [Your lesson content here]
+    Video URL: [If applicable]
+    
+    Quiz:
+    Question: [Quiz question]
+    Options:
+    A) [Option 1]
+    B) [Option 2]
+    C) [Option 3]
+    D) [Option 4]
+    Correct Answer: [Specify correct option]
+    Explanation: [Explain why this is correct]
+
+1.2. [Lesson Title]
+    Type: [Text/Video/Code/Quiz]
+    Duration: [Lesson duration]
+    Content: [Your lesson content here]
+
+Module Assignment:
+Title: [Assignment title]
+Description: [Assignment description]
+Instructions: [Detailed instructions]
+Submission Type: [File/Text/Link]
+Due Date: [If applicable]
+Total Points: [Point value]
+
+Resources:
+1. [Resource title and URL]
+2. [Resource title and URL]
+
+Module Assessment:
+Title: [Assessment title]
+Duration: [Time limit in minutes]
+Passing Score: [Minimum score required]
+
+Questions:
+1. [Question text]
+   A) [Option 1]
+   B) [Option 2]
+   C) [Option 3]
+   D) [Option 4]
+   Correct Answer: [Specify correct option]
+   Points: [Point value]
+
+[Repeat module structure for additional modules]
+
+4. Final Assessment
+-----------------
+Title: [Final assessment title]
+Description: [Assessment description]
+Duration: [Time limit in minutes]
+Passing Score: [Minimum score required]
+Number of Attempts Allowed: [Specify max attempts]
+
+Questions:
+1. [Question text]
+   A) [Option 1]
+   B) [Option 2]
+   C) [Option 3]
+   D) [Option 4]
+   Correct Answer: [Specify correct option]
+   Points: [Point value]
+
+5. Code Exercise Template
+----------------------
+Language: [python/javascript/typescript/html/css]
+Exercise Title: [Title]
+Instructions: [Instructions]
+
+Initial Code:
+[Provide starter code]
+
+Expected Output:
+[What the code should produce]
+
+Test Cases:
+1. Input: [Test input]
+   Expected Output: [Expected result]
+2. Input: [Test input]
+   Expected Output: [Expected result]
+
+6. Certificate Requirements
+------------------------
+□ Minimum Completion Percentage: [e.g., 80%]
+□ Minimum Assessment Score: [e.g., 70%]
+□ Additional Requirements: [Any other requirements]
+
+7. Course Resources
+-----------------
+1. [Resource name and description]
+2. [Resource name and description]
+3. [Resource name and description]
+
+EXAMPLE MODULE (SAMPLE)
+----------------------
+Module: Introduction to JavaScript
+Duration: 2 hours
+
+Learning Objectives:
+□ Understand basic JavaScript syntax
+□ Learn about variables and data types
+□ Write simple JavaScript programs
+
+Lessons:
+1. JavaScript Basics
+   Type: Video + Text
+   Duration: 30 minutes
+   Content:
+   "What is JavaScript?
+   JavaScript is a programming language that powers the web..."
+   
+   Video URL: [Your video URL]
+   
+   Quiz:
+   Question: "Which keyword is used to declare a variable in modern JavaScript?"
+   A) var
+   B) let
+   C) const
+   D) All of the above
+   Correct Answer: D
+   Explanation: "Modern JavaScript provides three ways to declare variables..."
+
+2. Variables and Data Types
+   Type: Code
+   Duration: 45 minutes
+   Code Exercise:
+   // Initial Code
+   let name = "";
+   let age = 0;
+   
+   // Write code to print "My name is [name] and I am [age] years old"
+   
+   // Expected Output:
+   // "My name is John and I am 25 years old"
+
+Module Assignment:
+Title: "Create a Simple Calculator"
+Description: "Build a calculator that can perform basic arithmetic operations"
+Instructions: "Create functions for addition, subtraction, multiplication, and division..."
+Submission Type: Code
+Total Points: 100
+
+Note: This template is a guide. Adjust sections based on your course needs. 
