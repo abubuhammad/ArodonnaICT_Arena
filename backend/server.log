@@ -1,0 +1,168 @@
+
+> backend@1.0.0 dev
+> ts-node src/server.ts
+
+✅ User routes loaded
+✅ Course Routes loaded: [
+  '/public',    '/settings',
+  '/settings',  '/categories',
+  '/:courseId', '/',
+  '/import',    '/upload-thumbnail',
+  '/',          '/enroll',
+  '/enrolled',  '/:courseId',
+  '/:courseId', '/:courseId/status'
+]
+✅ Loading Instructor Routes...
+✅ Loading Student Routes...
+✅ API Server is running...
+✅ Routes are being loaded...
+⏱️ Starting auto-publisher for courses (checks every 600 s)
+🚀 Server running on port 5000
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+viewLesson: searching for lesson {
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  enrollmentId: '693e15c4928cb5812ede6285',
+  moduleCount: 5
+}
+viewLesson: module 0 has 4 lessons
+viewLesson: comparing lesson 6938b43ca0463aff68bb5fd8 === 6938b43ca0463aff68bb5fd9 => false
+viewLesson: comparing lesson 6938b43ca0463aff68bb5fd9 === 6938b43ca0463aff68bb5fd9 => true
+viewLesson: found lesson progress, updating status
+viewLesson: attempt to view locked lesson {
+  enrollmentId: '693e15c4928cb5812ede6285',
+  userId: '693e15a5928cb5812ede61ee',
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  lpStatus: 'LOCKED'
+}
+viewLessonHandler error Error: Lesson is locked
+    at Object.<anonymous> (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:101:19)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+viewLesson: searching for lesson {
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  enrollmentId: '693e15c4928cb5812ede6285',
+  moduleCount: 5
+}
+viewLesson: module 0 has 4 lessons
+viewLesson: comparing lesson 6938b43ca0463aff68bb5fd8 === 6938b43ca0463aff68bb5fd9 => false
+viewLesson: comparing lesson 6938b43ca0463aff68bb5fd9 === 6938b43ca0463aff68bb5fd9 => true
+viewLesson: found lesson progress, updating status
+viewLesson: attempt to view locked lesson {
+  enrollmentId: '693e15c4928cb5812ede6285',
+  userId: '693e15a5928cb5812ede61ee',
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  lpStatus: 'LOCKED'
+}
+viewLessonHandler error Error: Lesson is locked
+    at Object.<anonymous> (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:101:19)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+viewLesson: searching for lesson {
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  enrollmentId: '693e15c4928cb5812ede6285',
+  moduleCount: 5
+}
+viewLesson: module 0 has 4 lessons
+viewLesson: comparing lesson 6938b43ca0463aff68bb5fd8 === 6938b43ca0463aff68bb5fd9 => false
+viewLesson: comparing lesson 6938b43ca0463aff68bb5fd9 === 6938b43ca0463aff68bb5fd9 => true
+viewLesson: found lesson progress, updating status
+viewLesson: attempt to view locked lesson {
+  enrollmentId: '693e15c4928cb5812ede6285',
+  userId: '693e15a5928cb5812ede61ee',
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  lpStatus: 'LOCKED'
+}
+viewLessonHandler error Error: Lesson is locked
+    at Object.<anonymous> (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:101:19)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+🔹 Received Token in Backend: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2UxNWE1OTI4Y2I1ODEyZWRlNjFlZSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY1NzMwMTkxLCJleHAiOjE3NjU4MTY1OTF9.DWZBcxmzu5QskYjJxG1U9RqtxrRsXuJ1dXvK5LAI7Hc
+✅ Token Verified Successfully: {
+  id: '693e15a5928cb5812ede61ee',
+  role: 'STUDENT',
+  iat: 1765730191,
+  exp: 1765816591
+}
+completeLessonNoQuiz: attempt to complete locked lesson {
+  enrollmentId: '693e15c4928cb5812ede6285',
+  userId: '693e15a5928cb5812ede61ee',
+  lessonId: '6938b43ca0463aff68bb5fd9',
+  lpStatus: 'LOCKED'
+}
+completeLessonNoQuizHandler error Error: Lesson is locked
+    at Object.<anonymous> (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:162:15)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Engr Arome\Documents\APPS\Arodonna-ICT-ArenaLMS\backend\src\services\courseProgressService.ts:38:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
