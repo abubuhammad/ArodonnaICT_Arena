@@ -168,7 +168,7 @@ const Dashboard: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f4f1ea] text-[#18202b]">
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
       <Navigation
         user={user}
         onLogout={handleLogout}
@@ -194,13 +194,13 @@ const Dashboard: React.FC = () => {
       {/* Testimonials */}
       <Testimonials />
  
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16">
+        <div className="mx-auto w-full max-w-7xl space-y-8 px-6">
           {errorMessage && (
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <svg className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+            <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">
+              <div className="flex items-start gap-3">
+                <div className="shrink-0">
+                  <svg className="h-5 w-5 text-red-600 dark:text-red-400" viewBox="0 0 20 20" fill="currentColor">
                     <path
                       fillRule="evenodd"
                       d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
@@ -208,24 +208,24 @@ const Dashboard: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-3">
-                  <p className="text-sm text-red-700">{errorMessage}</p>
+                <div>
+                  <p>{errorMessage}</p>
                 </div>
               </div>
             </div>
           )}
           
           {/* Category Filter */}
-          <div className="mt-10">
-            <div className="flex items-center justify-between mb-4">
+          <div>
+            <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a1732b]">Find your next chapter</p>
-                <h3 className="mt-2 text-3xl font-semibold tracking-[-0.03em] text-[#18202b]">Browse by category</h3>
+                <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Find your next chapter</p>
+                <h3 className="mt-2 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Browse by category</h3>
               </div>
               {!isAllSelected && (
                 <button
                   onClick={clearCategories}
-                  className="text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
+                  className="text-sm font-medium leading-5 text-indigo-600 hover:text-indigo-700 hover:underline dark:text-indigo-400"
                 >
                   Clear
                 </button>
@@ -233,18 +233,18 @@ const Dashboard: React.FC = () => {
             </div>
 
             {/* Dazzling container */}
-            <div className="border-y border-[#d8d0c2] py-4 sm:py-5">
-              <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="border-y border-slate-200 py-4 dark:border-slate-800">
+              <div className="flex flex-wrap gap-2">
                 {/* All chip */}
                 <motion.button
                   whileHover={{ scale: 1.05, y: -1 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={clearCategories}
                   className={[
-                    "px-4 sm:px-5 py-2 border text-sm sm:text-[0.95rem] font-semibold transition",
+                    "h-10 rounded-lg border px-3 text-sm font-medium leading-5 transition-colors",
                     isAllSelected
-                      ? "bg-[#18202b] text-white border-[#18202b]"
-                      : "bg-transparent border-[#c9c0b1] text-[#4d5560] hover:border-[#18202b] hover:text-[#18202b]"
+                      ? "border-indigo-600 bg-indigo-600 text-white"
+                      : "border-slate-300 bg-transparent text-slate-700 hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-300 dark:hover:text-indigo-400"
                   ].join(" ")}
                 >
                   All
@@ -260,10 +260,10 @@ const Dashboard: React.FC = () => {
                       whileTap={{ scale: 0.97 }}
                       onClick={() => toggleCategory(cat)}
                       className={[
-                        "px-4 sm:px-5 py-2 border text-sm sm:text-[0.95rem] font-semibold transition",
+                        "h-10 rounded-lg border px-3 text-sm font-medium leading-5 transition-colors",
                         active
-                          ? "bg-[#18202b] text-white border-[#18202b]"
-                          : "bg-transparent border-[#c9c0b1] text-[#4d5560] hover:border-[#18202b] hover:text-[#18202b]"
+                          ? "border-indigo-600 bg-indigo-600 text-white"
+                          : "border-slate-300 bg-transparent text-slate-700 hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-300 dark:hover:text-indigo-400"
                       ].join(" ")}
                     >
                       {cat}
@@ -275,16 +275,17 @@ const Dashboard: React.FC = () => {
           </div>
 
           {/* All Courses - directly under Browse by Categories for immediate filtering */}
-          <section className="mb-20">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-3xl font-semibold tracking-[-0.03em]">All Courses</h2>
+          <section>
+            <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">All Courses</h2>
               {selectedCategories.length > 0 && (
-                <span className="text-sm text-gray-500 dark:text-gray-400">Filtered by {selectedCategories.length} categor{selectedCategories.length > 1 ? 'ies' : 'y'}</span>
+                <span className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Filtered by {selectedCategories.length} categor{selectedCategories.length > 1 ? 'ies' : 'y'}</span>
               )}
             </div>
             {filteredCourses.length === 0 ? (
-              <div className="rounded-2xl p-8 text-center bg-white/70 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800">
-                <p className="text-gray-600 dark:text-gray-300">No courses found for the selected categories.</p>
+              <div className="py-12 text-center">
+                <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">No courses found</h3>
+                <p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Try another category or clear the current filters.</p>
               </div>
             ) : (
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -315,13 +316,13 @@ const Dashboard: React.FC = () => {
           </section>
 
           {/* Featured Courses */}
-          <section className="mb-20">
-            <div className="mb-7 flex items-end justify-between gap-4">
+          <section>
+            <div className="mb-6 flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a1732b]">Curated for momentum</p>
-                <h2 className="mt-2 text-3xl font-semibold tracking-[-0.03em]">Featured Courses</h2>
+                <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Curated for momentum</p>
+                <h2 className="mt-2 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Featured Courses</h2>
               </div>
-              <button onClick={() => navigate('/courses')} className="hidden text-sm font-semibold text-[#8a6328] hover:text-[#18202b] sm:block">
+              <button onClick={() => navigate('/courses')} className="hidden text-sm font-medium leading-5 text-indigo-600 hover:text-indigo-700 sm:block dark:text-indigo-400">
                 View all -&gt;
               </button>
             </div>

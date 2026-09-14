@@ -7,7 +7,6 @@ import api from "../utils/api";
 import { StudentStats, Certificate, Course } from "../types";
 import DashboardHeader from "../components/student/DashboardHeader";
 import StatsCardsSection from "../components/student/StatsCardsSection";
-import ProgressSection from "../components/student/ProgressSection";
 import CourseTabs, { TabType } from "../components/student/CourseTabs";
 import { AchievementsSection } from "../components/student/AchievementsSection";
 import { LoadingSpinner } from "../components/ui/LoadingSpinner";
@@ -201,14 +200,40 @@ const StudentDashboard: React.FC = () => {
   };
 
   if (loading) {
-    return <LoadingSpinner />;
+    return (
+      <div className="flex min-h-[50vh] items-center justify-center p-6">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 p-6">
       <DashboardHeader userName={user?.name || "Student"} />
       <StatsCardsSection stats={stats} />
-      <ProgressSection stats={stats} />
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" aria-labelledby="learning-progress">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 id="learning-progress" className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Learning progress</h2>
+            <p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Keep building momentum across your enrolled courses.</p>
+          </div>
+          <p className="text-sm font-medium leading-5 text-indigo-600 dark:text-indigo-400">{stats?.averageProgress || 0}% complete</p>
+        </div>
+        <div className="mt-6 h-3 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={stats?.averageProgress || 0} aria-label="Overall learning progress">
+          <div className="h-full rounded-full bg-indigo-600 transition-[width] duration-300 dark:bg-indigo-400" style={{ width: `${Math.min(Math.max(stats?.averageProgress || 0, 0), 100)}%` }} />
+        </div>
+        <div className="mt-4 flex flex-col gap-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <span>{stats?.totalHoursLearned || 0} hours spent learning</span>
+          <span>{stats?.coursesCompleted || 0} courses completed</span>
+        </div>
+      </section>
+      {enrolledCourses.length === 0 && (
+        <section className="py-12 text-center" aria-labelledby="enrollment-empty-state">
+          <h2 id="enrollment-empty-state" className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Your learning journey starts here</h2>
+          <p className="mx-auto mt-2 max-w-md text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">You are not enrolled in any courses yet. Explore the catalogue and choose a course to begin.</p>
+          <button type="button" onClick={() => navigate('/courses')} className="mt-4 inline-flex h-10 items-center justify-center rounded-lg bg-indigo-600 px-4 text-sm font-medium leading-5 text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950">Explore courses</button>
+        </section>
+      )}
       <CourseTabs
         activeTab={activeTab}
         setActiveTab={setActiveTab}

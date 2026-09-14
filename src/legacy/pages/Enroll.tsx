@@ -69,13 +69,13 @@ interface CustomAlertProps {
 
 const CustomAlert: React.FC<CustomAlertProps> = ({ variant, message }) => {
   const bgColor = 
-    variant === "error" ? "bg-red-50 border-red-200 text-red-800" :
-    variant === "success" ? "bg-green-50 border-green-200 text-green-800" :
-    "bg-yellow-50 border-yellow-200 text-yellow-800";
+    variant === "error" ? "border-red-200 bg-red-50 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" :
+    variant === "success" ? "border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200" :
+    "border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-500/30 dark:bg-amber-950/30 dark:text-amber-200";
   
   return (
-    <div className={`p-4 rounded-md border mb-4 ${bgColor}`}>
-      <p>{message}</p>
+    <div className={`rounded-lg border px-4 py-3 text-sm leading-5 ${bgColor}`} role="alert">
+      <p className="font-medium">{message}</p>
     </div>
   );
 };
@@ -327,7 +327,7 @@ const Enroll: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex min-h-[60vh] items-center justify-center bg-slate-50 p-6 dark:bg-slate-950">
         <LoadingSpinner />
       </div>
     );
@@ -335,9 +335,9 @@ const Enroll: React.FC = () => {
 
   if (!course) {
     return (
-      <div className="text-center p-8">
-        <h2 className="text-2xl font-bold text-red-600">Course Not Found</h2>
-        <p className="mt-4">The course you're looking for doesn't exist or has been removed.</p>
+      <div className="mx-auto flex min-h-[60vh] w-full max-w-7xl flex-col items-center justify-center px-6 py-12 text-center">
+        <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Course not found</h2>
+        <p className="mt-2 max-w-md text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">The course you are looking for does not exist or has been removed.</p>
         <Button className="mt-4" onClick={() => navigate("/courses")}>
           Browse Courses
         </Button>
@@ -349,19 +349,21 @@ const Enroll: React.FC = () => {
   if (localEnrollment) {
     if (localEnrollment.paymentStatus === "pending") {
       return (
-        <Card className="max-w-2xl mx-auto my-8">
+        <Card className="mx-auto my-8 w-full max-w-2xl">
           <CardHeader>
             <CardTitle>{course.title}</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="bg-yellow-50 p-4 rounded-md border border-yellow-200 mb-4">
-              <h3 className="text-lg font-semibold text-yellow-800">Payment Pending Verification</h3>
-              <p className="mt-2">
+            <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-amber-800 dark:border-amber-500/30 dark:bg-amber-950/30 dark:text-amber-200">
+              <h3 className="text-lg font-semibold leading-7">Payment pending verification</h3>
+              <p className="mt-2 text-sm leading-5">
                 Your payment for this course is being verified. You will gain access once confirmed.
               </p>
             </div>
-            <p><strong>Payment Reference:</strong> {localEnrollment.paymentReference}</p>
-            <p><strong>Payment Method:</strong> {localEnrollment.paymentMethod === "paystack" ? "Paystack" : "Bank Transfer"}</p>
+            <div className="mt-6 space-y-2 text-sm leading-5 text-slate-600 dark:text-slate-400">
+              <p><span className="font-medium text-slate-950 dark:text-slate-50">Payment reference:</span> {localEnrollment.paymentReference}</p>
+              <p><span className="font-medium text-slate-950 dark:text-slate-50">Payment method:</span> {localEnrollment.paymentMethod === "paystack" ? "Paystack" : "Bank Transfer"}</p>
+            </div>
           </CardContent>
           <CardFooter>
             <Button variant="outline" onClick={() => navigate("/dashboard")}>
@@ -373,21 +375,25 @@ const Enroll: React.FC = () => {
     }
     
     return (
-      <Card className="max-w-2xl mx-auto my-8">
+      <Card className="mx-auto my-8 w-full max-w-2xl">
         <CardHeader>
           <CardTitle>{course.title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="bg-green-50 p-4 rounded-md border border-green-200 mb-4">
-            <h3 className="text-lg font-semibold text-green-800">You're Enrolled!</h3>
-            <p className="mt-2">
+          <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200">
+            <h3 className="text-lg font-semibold leading-7">You're enrolled</h3>
+            <p className="mt-2 text-sm leading-5">
               You're already enrolled in this course. Continue learning from where you left off.
             </p>
           </div>
-          <div className="mt-4">
-            <p>
-              <strong>Progress:</strong> {localEnrollment.progressPercentage}% completed
-            </p>
+          <div className="mt-6">
+            <div className="flex items-center justify-between text-sm font-medium leading-5 text-slate-600 dark:text-slate-400">
+              <span>Course progress</span>
+              <span className="text-indigo-600 dark:text-indigo-400">{localEnrollment.progressPercentage}%</span>
+            </div>
+            <div className="mt-2 h-3 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={localEnrollment.progressPercentage} aria-label="Course progress">
+              <div className="h-full rounded-full bg-indigo-600 dark:bg-indigo-400" style={{ width: `${Math.min(Math.max(localEnrollment.progressPercentage, 0), 100)}%` }} />
+            </div>
           </div>
         </CardContent>
         <CardFooter>
@@ -398,7 +404,7 @@ const Enroll: React.FC = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto my-8 p-4">
+    <div className="mx-auto w-full max-w-7xl px-6 py-16">
       {/* Show error message if exists */}
       {errorMessage && (
         <CustomAlert variant="error" message={errorMessage} />
@@ -409,12 +415,18 @@ const Enroll: React.FC = () => {
         <CustomAlert variant="success" message={successMessage} />
       )}
       
+      <div className="mb-8 max-w-3xl">
+        <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Course enrollment</p>
+        <h1 className="mt-2 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Choose how you want to begin</h1>
+        <p className="mt-3 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Review the course details, select a payment method, and we will confirm your access.</p>
+      </div>
+
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">{course.title}</CardTitle>
+          <CardTitle className="text-2xl leading-8">{course.title}</CardTitle>
         </CardHeader>
         <CardContent className="p-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 lg:grid-cols-2">
             {/* Course Preview Section */}
             <div className="space-y-6">
               {course.thumbnail && (
@@ -427,19 +439,19 @@ const Enroll: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               )}
-              <p className="text-gray-700 leading-relaxed">{course.description}</p>
+              <p className="text-base font-normal leading-6 text-slate-600 dark:text-slate-400">{course.description}</p>
             </div>
 
             {/* Course Details Section */}
             <div className="space-y-6">
-              <div className="bg-gray-50 rounded-xl p-6 space-y-4">
+              <div className="space-y-4 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-indigo-100 rounded-full">
                     <User className="w-6 h-6 text-indigo-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Instructor</p>
-                    <p className="font-medium">{typeof course.instructor === 'object' ? course.instructor.name : course.instructor}</p>
+                    <p className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Instructor</p>
+                    <p className="text-base font-medium leading-6 text-slate-950 dark:text-slate-50">{typeof course.instructor === 'object' ? course.instructor.name : course.instructor}</p>
                   </div>
                 </div>
 
@@ -448,8 +460,8 @@ const Enroll: React.FC = () => {
                     <Clock className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Duration</p>
-                    <p className="font-medium">{course.duration}</p>
+                    <p className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Duration</p>
+                    <p className="text-base font-medium leading-6 text-slate-950 dark:text-slate-50">{course.duration}</p>
                   </div>
                 </div>
 
@@ -458,8 +470,8 @@ const Enroll: React.FC = () => {
                     <Target className="w-6 h-6 text-yellow-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Level</p>
-                    <p className="font-medium">{course.level}</p>
+                    <p className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Level</p>
+                    <p className="text-base font-medium leading-6 text-slate-950 dark:text-slate-50">{course.level}</p>
                   </div>
                 </div>
 
@@ -468,8 +480,8 @@ const Enroll: React.FC = () => {
                     <CreditCard className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Price</p>
-                    <p className="font-medium">{course.isFree ? "Free" : `₦${course.price.toLocaleString()}`}</p>
+                    <p className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Price</p>
+                    <p className="text-base font-medium leading-6 text-slate-950 dark:text-slate-50">{course.isFree ? "Free" : `₦${course.price.toLocaleString()}`}</p>
                   </div>
                 </div>
               </div>
@@ -477,30 +489,30 @@ const Enroll: React.FC = () => {
               {/* Payment Section for paid courses */}
               {!course.isFree && !transferRefSubmitted && (
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold">Select Payment Method</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                  <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Select payment method</h3>
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <Button
                       variant="outline"
                       className={`p-6 rounded-xl transition-all duration-200 ${
                         paymentMethod === "paystack" 
-                          ? "ring-2 ring-blue-500 bg-blue-50" 
-                          : "hover:bg-blue-50"
+                          ? "border-indigo-600 bg-indigo-50 ring-2 ring-indigo-500 dark:bg-indigo-500/10"
+                          : "hover:border-indigo-300 hover:bg-indigo-50/60 dark:hover:border-indigo-700 dark:hover:bg-indigo-500/10"
                       }`}
                       onClick={() => setPaymentMethod("paystack")}
                     >
-                      <CreditCard className="h-8 w-8 mb-2 text-blue-600" />
+                      <CreditCard className="mb-2 h-8 w-8 text-indigo-600 dark:text-indigo-400" />
                       Pay with Paystack
                     </Button>
                     <Button
                       variant="outline"
                       className={`p-6 rounded-xl transition-all duration-200 ${
                         paymentMethod === "bank-transfer" 
-                          ? "ring-2 ring-green-500 bg-green-50" 
-                          : "hover:bg-green-50"
+                          ? "border-indigo-600 bg-indigo-50 ring-2 ring-indigo-500 dark:bg-indigo-500/10"
+                          : "hover:border-indigo-300 hover:bg-indigo-50/60 dark:hover:border-indigo-700 dark:hover:bg-indigo-500/10"
                       }`}
                       onClick={() => setPaymentMethod("bank-transfer")}
                     >
-                      <Building2 className="h-8 w-8 mb-2 text-green-600" />
+                      <Building2 className="mb-2 h-8 w-8 text-indigo-600 dark:text-indigo-400" />
                       Bank Transfer
                     </Button>
                   </div>
@@ -510,12 +522,12 @@ const Enroll: React.FC = () => {
           </div>
         </CardContent>
 
-        <CardFooter className="flex flex-col space-y-4 items-stretch sm:flex-row sm:space-y-0 sm:space-x-4 sm:items-center">
+        <CardFooter className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
           {course.isFree ? (
             <Button 
               onClick={handleFreeEnrollment} 
               disabled={enrolling} 
-              className="w-full sm:w-auto bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 shadow-md text-white font-bold py-3 px-6 rounded-lg"
+              className="w-full sm:w-auto"
             >
               {enrolling ? <LoadingSpinner /> : "Enroll for Free"}
             </Button>
@@ -523,7 +535,7 @@ const Enroll: React.FC = () => {
             <Button 
               onClick={initiatePaystackPayment} 
               disabled={enrolling} 
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 shadow-md text-white font-bold py-3 px-6 rounded-lg"
+              className="w-full sm:w-auto"
             >
               {enrolling ? <LoadingSpinner /> : `Pay ₦${course.price.toLocaleString()} with Paystack`}
             </Button>
@@ -531,19 +543,19 @@ const Enroll: React.FC = () => {
             <Button 
               onClick={handleBankTransfer} 
               disabled={enrolling || showBankDetails} 
-              className="w-full sm:w-auto bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 shadow-md text-white font-bold py-3 px-6 rounded-lg"
+              className="w-full sm:w-auto"
             >
               {enrolling ? <LoadingSpinner /> : "Proceed with Bank Transfer"}
             </Button>
           ) : (
-            <Button disabled={true} className="w-full sm:w-auto bg-gray-400 text-white py-3 px-6 rounded-lg">
+            <Button disabled={true} className="w-full sm:w-auto">
               Select a payment method
             </Button>
           )}
           <Button 
             variant="outline" 
             onClick={() => navigate("/courses")} 
-            className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 text-white py-3 px-6 rounded-full shadow-md"
+            className="w-full sm:w-auto"
           >
             Back to Courses
           </Button>
@@ -555,57 +567,57 @@ const Enroll: React.FC = () => {
         <AlertDialog open={showBankDetails} onOpenChange={setShowBankDetails}>
           <AlertDialogContent className="max-w-lg">
             <AlertDialogHeader>
-              <AlertDialogTitle className="text-xl font-bold">Complete Your Bank Transfer</AlertDialogTitle>
-              <AlertDialogDescription className="text-gray-600">
+              <AlertDialogTitle className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Complete your bank transfer</AlertDialogTitle>
+              <AlertDialogDescription className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">
                 Transfer the exact amount to the account below and provide your payment reference for verification.
               </AlertDialogDescription>
             </AlertDialogHeader>
-            <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg border border-blue-200">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
               <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-gray-700">Bank Name:</span>
-                  <span className="font-bold text-gray-900">{BANK_DETAILS.bankName}</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <span className="text-sm font-medium leading-5 text-slate-500 dark:text-slate-400">Bank name</span>
+                    <span className="text-base font-semibold leading-6 text-slate-950 dark:text-slate-50">{BANK_DETAILS.bankName}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-gray-700">Account Number:</span>
-                  <span className="font-bold text-gray-900 font-mono">{BANK_DETAILS.accountNumber}</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <span className="text-sm font-medium leading-5 text-slate-500 dark:text-slate-400">Account number</span>
+                    <span className="font-mono text-base font-semibold leading-6 text-slate-950 dark:text-slate-50">{BANK_DETAILS.accountNumber}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-gray-700">Account Name:</span>
-                  <span className="font-bold text-gray-900">{BANK_DETAILS.accountName}</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <span className="text-sm font-medium leading-5 text-slate-500 dark:text-slate-400">Account name</span>
+                    <span className="text-base font-semibold leading-6 text-slate-950 dark:text-slate-50">{BANK_DETAILS.accountName}</span>
                 </div>
-                <div className="flex justify-between items-center border-t pt-3">
-                  <span className="font-medium text-gray-700">Amount to Transfer:</span>
-                  <span className="font-bold text-lg text-green-600">₦{course.price.toLocaleString()}</span>
+                  <div className="flex flex-col gap-1 border-t border-slate-200 pt-3 sm:flex-row sm:items-center sm:justify-between dark:border-slate-800">
+                    <span className="text-sm font-medium leading-5 text-slate-500 dark:text-slate-400">Amount to transfer</span>
+                    <span className="text-lg font-semibold leading-7 text-emerald-600 dark:text-emerald-400">₦{course.price.toLocaleString()}</span>
                 </div>
               </div>
-              <div className="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded">
-                <p className="text-sm text-yellow-800">
-                  <strong>Important:</strong> Use your full name and email as the transfer description/narration for easy identification.
+                <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-3 text-sm leading-5 text-amber-800 dark:border-amber-500/30 dark:bg-amber-950/30 dark:text-amber-200">
+                  <p>
+                    <strong>Important:</strong> Use your full name and email as the transfer description/narration for easy identification.
                 </p>
               </div>
             </div>
             <div className="mt-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Payment Reference/Transaction ID <span className="text-red-500">*</span>
+                <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">
+                  Payment reference / transaction ID <span className="text-red-600 dark:text-red-400">*</span>
               </label>
               <input 
                 type="text" 
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" 
+                  className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-950 outline-none transition-colors placeholder:text-slate-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-50 dark:placeholder:text-slate-500"
                 value={transferReference}
                 onChange={(e) => setTransferReference(e.target.value)}
                 placeholder="Enter your transaction reference number"
               />
-              <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">
                 This is the reference/ID you received after making the transfer
               </p>
             </div>
             {errorMessage && (
-              <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-700 text-sm">{errorMessage}</p>
+                <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">
+                  <p>{errorMessage}</p>
               </div>
             )}
-            <AlertDialogFooter className="flex space-x-3">
+              <AlertDialogFooter className="flex flex-col gap-3 sm:flex-row sm:justify-end">
               <Button 
                 variant="outline" 
                 onClick={() => setShowBankDetails(false)}
@@ -616,7 +628,7 @@ const Enroll: React.FC = () => {
               <AlertDialogAction 
                 onClick={submitTransferReference} 
                 disabled={!transferReference.trim() || enrolling}
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"
+                className="bg-indigo-600 text-white hover:bg-indigo-700"
               >
                 {enrolling ? <LoadingSpinner size="sm" /> : "Submit Reference"}
               </AlertDialogAction>

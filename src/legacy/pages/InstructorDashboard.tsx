@@ -6,6 +6,7 @@ import api from "../utils/api";
 import { logoutUser } from "../store/slices/authSlice";
 import { RootState } from "../store";
 import { Tabs } from "../components/ui/tabs";
+import { Badge } from "../components/ui/badge";
 import CourseCard from "../components/courses/CourseCard";
 import { StatCard } from "../components/ui/StatCard";
 import {
@@ -55,6 +56,7 @@ interface Course {
     avatar?: string;
   };
   thumbnail?: string;
+  status?: string;
 }
 
 interface EnrollmentProgress {
@@ -82,6 +84,13 @@ interface ApiError {
 }
 
 type TabType = "overview" | "courses" | "students" | "analytics";
+
+const getCourseStatus = (course: Course) => {
+  const status = String(course.status || "DRAFT").toUpperCase();
+  if (status === "PUBLISHED") return { label: "Published", variant: "success" as const };
+  if (status === "REVIEW" || status === "QA") return { label: "In review", variant: "warning" as const };
+  return { label: "Draft", variant: "secondary" as const };
+};
 
 const InstructorDashboard: React.FC = () => {
   const dispatch = useDispatch();
@@ -299,7 +308,11 @@ const InstructorDashboard: React.FC = () => {
   }, [instructorStatus, fetchDashboardData]);
 
   if (loading) {
-    return <LoadingSpinner />;
+    return (
+      <div className="flex min-h-[50vh] items-center justify-center p-6">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   if (error) {
@@ -329,8 +342,8 @@ const InstructorDashboard: React.FC = () => {
 
   return (
       <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-4">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button
               onClick={() => navigate("/")}
               variant="outline"
@@ -339,7 +352,10 @@ const InstructorDashboard: React.FC = () => {
               <ArrowLeft className="h-4 w-4" />
               Back to Main Dashboard
             </Button>
-            <h1 className="text-3xl font-bold">Instructor Dashboard</h1>
+            <div>
+              <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Instructor workspace</p>
+              <h1 className="mt-1 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Instructor Dashboard</h1>
+            </div>
           </div>
         </div>
         
@@ -350,7 +366,7 @@ const InstructorDashboard: React.FC = () => {
           className="mb-8"
         >
           {activeTab === "overview" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
               <StatCard
                 title="Total Students"
                 value={stats?.totalStudents || 0}
@@ -388,7 +404,11 @@ const InstructorDashboard: React.FC = () => {
 
           {activeTab === "courses" && (
             <>
-              <div className="flex justify-end mb-6">
+              <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Course management</h2>
+                  <p className="mt-1 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Review, edit, and publish your course catalogue.</p>
+                </div>
                 <Button
                   onClick={() => navigate("/instructor/create-course")}
                   className="flex items-center gap-2"
@@ -397,20 +417,24 @@ const InstructorDashboard: React.FC = () => {
                   Create New Course
                     </Button>
                   </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {courses.map((course) => (
-                  <CourseCard
-                    key={course._id}
-                    course={course as any}
-                    enrollments={[]}
-                    onEnroll={() => navigate(`/instructor/edit-course/${course._id}`)}
-                    isAuthenticated={true}
-                    currentUserRole="instructor"
-                    currentUserId={user?.id || ""}
-                    platformSharePercent={platformSharePercent}
-                    locale={instructorProfile?.locale}
-                    currencyCode={instructorProfile?.currency}
-                  />
+                  <div key={course._id} className="relative">
+                    <Badge variant={getCourseStatus(course).variant} className="absolute right-3 top-3 z-10 shadow-sm">
+                      {getCourseStatus(course).label}
+                    </Badge>
+                    <CourseCard
+                      course={course as any}
+                      enrollments={[]}
+                      onEnroll={() => navigate(`/instructor/edit-course/${course._id}`)}
+                      isAuthenticated={true}
+                      currentUserRole="instructor"
+                      currentUserId={user?.id || ""}
+                      platformSharePercent={platformSharePercent}
+                      locale={instructorProfile?.locale}
+                      currencyCode={instructorProfile?.currency}
+                    />
+                  </div>
                 ))}
               </div>
         </>
@@ -443,8 +467,9 @@ const InstructorDashboard: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Instructor Dashboard</h1>
+    <div className="mx-auto w-full max-w-7xl px-6 py-16">
+      <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Instructor workspace</p>
+      <h1 className="mt-2 mb-8 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Instructor Dashboard</h1>
       
       <Tabs
         tabs={tabs}
@@ -453,7 +478,7 @@ const InstructorDashboard: React.FC = () => {
         className="mb-8"
       >
         {activeTab === "overview" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             <StatCard
               title="Total Students"
               value={stats?.totalStudents || 0}
@@ -478,19 +503,29 @@ const InstructorDashboard: React.FC = () => {
         )}
 
         {activeTab === "courses" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <>
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Course management</h2>
+            <p className="mt-1 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Review, edit, and publish your course catalogue.</p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
-              <CourseCard
-                key={course._id}
-                course={course as any}
-                enrollments={[]}
-                onEnroll={() => navigate(`/instructor/edit-course/${course._id}`)}
-                isAuthenticated={true}
-                currentUserRole="instructor"
-                currentUserId={user?.id || ""}
-              />
+              <div key={course._id} className="relative">
+                <Badge variant={getCourseStatus(course).variant} className="absolute right-3 top-3 z-10 shadow-sm">
+                  {getCourseStatus(course).label}
+                </Badge>
+                <CourseCard
+                  course={course as any}
+                  enrollments={[]}
+                  onEnroll={() => navigate(`/instructor/edit-course/${course._id}`)}
+                  isAuthenticated={true}
+                  currentUserRole="instructor"
+                  currentUserId={user?.id || ""}
+                />
+              </div>
             ))}
           </div>
+          </>
         )}
 
         {activeTab === "students" && (

@@ -406,13 +406,16 @@ const InstructorEditCourse: React.FC = () => {
     });
   };
 
-  if (loading) return <div className="p-6">Loading...</div>;
-  if (error) return <div className="p-6 text-red-500">{error}</div>;
+  if (loading) return <div className="flex min-h-[50vh] items-center justify-center bg-slate-50 p-6 text-sm text-slate-500 dark:bg-slate-950 dark:text-slate-400">Loading...</div>;
+  if (error) return <div className="mx-auto mt-16 max-w-3xl rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{error}</div>;
 
   return (
-    <div className="max-w-5xl mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Edit Course</h1>
+    <div className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Instructor course tools</p>
+          <h1 className="mt-2 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Edit course</h1>
+        </div>
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => navigate(-1)}>
             Cancel
@@ -421,9 +424,9 @@ const InstructorEditCourse: React.FC = () => {
         </div>
       </div>
 
-      {error && <div className="text-red-500">{error}</div>}
+      {error && <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{error}</div>}
 
-      <Card className="p-4 space-y-6">
+      <Card className="space-y-8 p-6">
         <BasicInfoStep
           courseData={courseData}
           handleCourseDataChange={handleCourseDataChange}
@@ -431,22 +434,22 @@ const InstructorEditCourse: React.FC = () => {
           categories={availableCategories}
         />
 
-        <div className="rounded-xl border border-gray-200 bg-white p-4 space-y-3">
+        <div className="space-y-4 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
           <div>
-            <h2 className="text-lg font-semibold text-gray-800">Course Thumbnail</h2>
-            <p className="text-sm text-gray-600">Upload a new image to replace the current thumbnail.</p>
+            <h2 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Course thumbnail</h2>
+            <p className="mt-1 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Upload a new image to replace the current thumbnail.</p>
           </div>
           <input
             type="file"
             accept="image/*"
             onChange={handleThumbnailChange}
-            className="w-full p-2 border rounded-lg"
+            className="w-full rounded-lg border border-slate-300 bg-white p-3 text-sm dark:border-slate-700 dark:bg-slate-900"
           />
           {thumbnailPreview && (
             <img
               src={thumbnailPreview}
               alt="Course thumbnail preview"
-              className="w-full max-w-md h-48 object-cover rounded-lg"
+              className="h-48 w-full max-w-md rounded-lg object-cover"
             />
           )}
         </div>

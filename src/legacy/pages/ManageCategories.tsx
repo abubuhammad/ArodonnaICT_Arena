@@ -74,18 +74,18 @@ const ManageCategories: React.FC = () => {
 
   return (
     <DashboardLayout activeItem="categories" adminUser={{ name: "Admin" }}>
-      <div className="py-6 space-y-6">
+      <div className="space-y-8 py-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">Manage Categories</h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Create, search, and delete course categories.</p>
+            <h1 className="text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Manage categories</h1>
+            <p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Create, search, and delete course categories.</p>
           </div>
           <Button variant="outline" onClick={() => navigate("/admin/dashboard")} className="inline-flex items-center gap-2">
             <ArrowLeft size={16} /> Back to Dashboard
           </Button>
         </div>
 
-        <div className="rounded-xl bg-white/80 dark:bg-slate-900/80 backdrop-blur border border-slate-200 dark:border-slate-800 shadow-sm p-4 space-y-4">
+        <div className="space-y-6 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
             <label className="relative w-full lg:w-80">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
@@ -110,7 +110,7 @@ const ManageCategories: React.FC = () => {
             </div>
           </div>
 
-          <div className="rounded-lg border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-950/70">
+            <div className="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
             {loading ? (
               <div className="p-4"><SkeletonLoader lines={4} /></div>
             ) : (
@@ -122,11 +122,11 @@ const ManageCategories: React.FC = () => {
                       initial={{ opacity: 0, y: 6 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 6 }}
-                      className="flex items-center justify-between px-4 py-3"
+                      className="flex items-center justify-between gap-4 px-4 py-4"
                     >
                       <div>
-                        <p className="font-medium text-slate-900 dark:text-slate-100">{cat.name}</p>
-                        <p className="text-xs text-slate-500">ID: {cat.id}</p>
+                        <p className="text-sm font-semibold leading-5 text-slate-950 dark:text-slate-50">{cat.name}</p>
+                        <p className="mt-1 text-xs font-medium leading-4 text-slate-500 dark:text-slate-400">ID: {cat.id}</p>
                       </div>
                       <Button
                         variant="destructive"
@@ -139,7 +139,7 @@ const ManageCategories: React.FC = () => {
                     </motion.li>
                   ))}
                   {filtered.length === 0 && (
-                    <li className="px-4 py-6 text-sm text-slate-500">No categories found.</li>
+                    <li className="py-12 text-center text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">No categories found.</li>
                   )}
                 </AnimatePresence>
               </ul>

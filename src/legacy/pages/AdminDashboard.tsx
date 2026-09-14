@@ -345,22 +345,22 @@ const AdminDashboard: React.FC = () => {
       searchTerm={searchTerm}
       activeItem={activeNav}
     >
-      <div className="py-6 space-y-6">
+      <div className="space-y-8 py-6">
       <AdminHomeKPIs />
         <div className="space-y-2">
           <motion.h1
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl font-bold text-slate-900 dark:text-slate-100"
+            className="text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50"
           >
             Admin Dashboard
           </motion.h1>
-          <p className="text-slate-500 dark:text-slate-400">
+          <p className="text-base font-normal leading-6 text-slate-500 dark:text-slate-400">
             Manage users, courses, enrollments, system settings, categories, and theme
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" role="list">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" role="list">
           <StatsCard
             label="Total Users"
             value={totalUsers}
@@ -405,12 +405,12 @@ const AdminDashboard: React.FC = () => {
         {(deleteError || deleteSuccess) && (
           <div className="px-4">
             {deleteError && (
-              <div className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+              <div className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">
                 {deleteError}
               </div>
             )}
             {deleteSuccess && (
-              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm leading-5 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200" role="status">
                 {deleteSuccess}
               </div>
             )}
@@ -420,11 +420,11 @@ const AdminDashboard: React.FC = () => {
           </div>
         )}
 
-        <div id="instructor-approval" className="rounded-xl bg-white/80 dark:bg-slate-900/80 backdrop-blur border border-slate-200 dark:border-slate-800 shadow-sm p-4">
+        <div id="instructor-approval" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
           <div className="flex items-center justify-between mb-3">
             <div>
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Instructor Approval</h2>
-              <p className="text-sm text-slate-500 dark:text-slate-400">Approve pending instructor requests.</p>
+              <h2 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Instructor approval</h2>
+              <p className="mt-1 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Approve pending instructor requests.</p>
             </div>
             <button
               onClick={handleRefreshUsers}
@@ -434,14 +434,14 @@ const AdminDashboard: React.FC = () => {
             </button>
           </div>
           {pendingInstructors.length === 0 ? (
-            <p className="text-sm text-slate-500">No pending instructors.</p>
+            <div className="py-12 text-center text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">No pending instructors.</div>
           ) : (
             <div className="divide-y divide-slate-200 dark:divide-slate-800">
               {pendingInstructors.map((user) => (
-                <div key={user._id} className="flex items-center justify-between py-3">
+                <div key={user._id} className="flex items-center justify-between gap-4 py-4">
                   <div>
-                    <p className="font-medium text-slate-900 dark:text-slate-100">{user.name || "No Name"}</p>
-                    <p className="text-xs text-slate-500">{user.email || "No Email"}</p>
+                    <p className="text-sm font-semibold leading-5 text-slate-950 dark:text-slate-50">{user.name || "No Name"}</p>
+                    <p className="mt-1 text-xs font-medium leading-4 text-slate-500 dark:text-slate-400">{user.email || "No Email"}</p>
                   </div>
                   {user._id && (
                     <button
@@ -457,8 +457,9 @@ const AdminDashboard: React.FC = () => {
           )}
         </div>
 
-        <div className="rounded-xl bg-white/80 dark:bg-slate-900/80 backdrop-blur border border-slate-200 dark:border-slate-800 shadow-sm p-4" id="users">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">Enrollment Management</h2>
+        <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" id="users">
+          <h2 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Enrollment management</h2>
+          <p className="mt-1 mb-6 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Manage access, certificates, and enrollment status.</p>
           {adminToken ? (
             <>
               <FreeEnrollmentForm

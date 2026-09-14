@@ -450,28 +450,28 @@ const CreateCourse: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-500/20">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-2">Media & Assets</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Upload your course thumbnail and any additional media assets.</p>
+              <h2 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Media & assets</h2>
+              <p className="mx-auto mt-2 max-w-2xl text-base font-normal leading-6 text-slate-500 dark:text-slate-400">Upload your course thumbnail and any additional media assets.</p>
             </div>
             <div className="max-w-md mx-auto">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Course Thumbnail *</label>
+              <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Course thumbnail *</label>
               <input
                 type="file"
                 accept="image/*"
                 onChange={handleThumbnailChange}
-                className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-purple-500 focus:outline-none transition-all duration-300"
+                className="w-full rounded-lg border border-slate-300 bg-white p-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-950"
               />
               {thumbnailPreview && (
                 <div className="mt-4">
                   <img 
                     src={thumbnailPreview} 
                     alt="Course thumbnail preview" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="h-48 w-full rounded-lg object-cover"
                   />
                 </div>
               )}
@@ -554,9 +554,9 @@ const CreateCourse: React.FC = () => {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Your course is ready to go live. Review everything one more time before publishing.
             </p>
-            <div className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-200">
-              <h3 className="text-xl font-semibold mb-4">Course Summary</h3>
-              <div className="text-left space-y-2">
+            <div className="mx-auto max-w-2xl rounded-xl border border-cyan-200 bg-cyan-50/70 p-6 dark:border-cyan-900/60 dark:bg-cyan-950/20">
+              <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Course summary</h3>
+              <div className="mt-4 space-y-2 text-left text-sm leading-5 text-slate-700 dark:text-slate-300">
                 <p><strong>Title:</strong> {courseData.title}</p>
                 <p><strong>Category:</strong> {courseData.category}</p>
                 <p><strong>Price:</strong> {courseData.isFree ? 'Free' : `$${courseData.price}`}</p>
@@ -573,36 +573,36 @@ const CreateCourse: React.FC = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16">
       <div className="flex items-center justify-between">
         <button
           type="button"
           onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/instructor/dashboard"))}
-          className="text-sm text-indigo-600 hover:text-indigo-700 flex items-center gap-2"
+          className="inline-flex items-center gap-2 text-sm font-medium leading-5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
         >
           Back to Dashboard
         </button>
       </div>
 
-      <div className="flex gap-2 mb-2">
+      <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-6 dark:border-slate-800">
         <button
           type="button"
           onClick={() => setMode("wizard")}
-          className={`px-4 py-2 rounded-lg border text-sm ${mode === "wizard" ? "bg-indigo-600 text-white border-indigo-600" : "bg-white text-gray-700 border-gray-200"}`}
+          className={`h-10 rounded-lg border px-3 text-sm font-medium leading-5 transition-colors ${mode === "wizard" ? "border-indigo-600 bg-indigo-600 text-white" : "border-slate-300 bg-white text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"}`}
         >
           Course Maker
         </button>
         <button
           type="button"
           onClick={() => setMode("json")}
-          className={`px-4 py-2 rounded-lg border text-sm ${mode === "json" ? "bg-indigo-600 text-white border-indigo-600" : "bg-white text-gray-700 border-gray-200"}`}
+          className={`h-10 rounded-lg border px-3 text-sm font-medium leading-5 transition-colors ${mode === "json" ? "border-indigo-600 bg-indigo-600 text-white" : "border-slate-300 bg-white text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"}`}
         >
           Import from JSON
         </button>
         <button
           type="button"
           onClick={() => setMode("markdown")}
-          className={`px-4 py-2 rounded-lg border text-sm ${mode === "markdown" ? "bg-indigo-600 text-white border-indigo-600" : "bg-white text-gray-700 border-gray-200"}`}
+          className={`h-10 rounded-lg border px-3 text-sm font-medium leading-5 transition-colors ${mode === "markdown" ? "border-indigo-600 bg-indigo-600 text-white" : "border-slate-300 bg-white text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"}`}
         >
           Upload Markdown
         </button>
@@ -618,19 +618,19 @@ const CreateCourse: React.FC = () => {
             {renderStepContent()}
           </CreateCourseWizard>
           {error && (
-            <div className="fixed bottom-4 right-4 max-w-md p-4 bg-red-100 text-red-700 rounded-lg shadow-lg border border-red-200">
+            <div className="fixed bottom-4 right-4 max-w-md rounded-lg border border-red-200 bg-red-50 p-4 text-sm leading-5 text-red-800 shadow-sm dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">
               {error}
             </div>
           )}
         </form>
       ) : mode === "json" ? (
-        <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 space-y-3">
-          <p className="text-sm text-gray-600 dark:text-gray-300">Paste your full course JSON below, or select a JSON file.</p>
+        <div className="space-y-6 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+          <p className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Paste your full course JSON below, or select a JSON file.</p>
           <textarea
             value={jsonPayload}
             onChange={(e) => setJsonPayload(e.target.value)}
             rows={14}
-            className="w-full rounded-lg border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-950 p-3 text-sm font-mono"
+            className="w-full rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm leading-5 text-slate-950 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50"
             placeholder={`{
   "title": "Course title",
   "description": "Course description",
@@ -657,17 +657,17 @@ const CreateCourse: React.FC = () => {
             </button>
           </div>
           {importMessage && (
-            <div className="text-sm text-emerald-600">{importMessage}</div>
+            <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm leading-5 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200">{importMessage}</div>
           )}
           {error && (
-            <div className="text-sm text-red-600">{error}</div>
+            <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{error}</div>
           )}
         </div>
       ) : (
-        <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 space-y-4">
+        <div className="space-y-6 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Upload Markdown Course</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+            <h2 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Upload Markdown Course</h2>
+            <p className="mt-1 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">
               Select a completed Markdown course template. The file must follow the format in docs/course_template.md.
             </p>
           </div>
@@ -675,10 +675,10 @@ const CreateCourse: React.FC = () => {
             type="file"
             accept=".md,.markdown,text/markdown,text/plain"
             onChange={(e) => setMarkdownFile(e.target.files?.[0] || null)}
-            className="w-full rounded-lg border border-gray-200 dark:border-gray-800 p-3 text-sm"
+            className="w-full rounded-lg border border-slate-300 bg-white p-3 text-sm dark:border-slate-700 dark:bg-slate-950"
           />
           {markdownFile && (
-            <p className="text-sm text-gray-600 dark:text-gray-300">Selected: {markdownFile.name}</p>
+            <p className="text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Selected: {markdownFile.name}</p>
           )}
           <button
             type="button"
@@ -688,8 +688,8 @@ const CreateCourse: React.FC = () => {
           >
             {importLoading ? "Importing..." : "Create Course from Markdown"}
           </button>
-          {importMessage && <div className="text-sm text-emerald-600">{importMessage}</div>}
-          {error && <div className="text-sm text-red-600">{error}</div>}
+          {importMessage && <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm leading-5 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200">{importMessage}</div>}
+          {error && <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{error}</div>}
         </div>
       )}
     </div>

@@ -40,26 +40,30 @@ const ManageTheme: React.FC = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">Manage Theme</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="mx-auto w-full max-w-3xl px-6 py-16">
+      <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Platform appearance</p>
+      <h1 className="mt-2 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Manage theme</h1>
+      <p className="mt-3 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Update the values used by the platform-wide visual theme.</p>
+      <form onSubmit={handleSubmit} className="mt-8 space-y-6 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
         <div>
-          <label>Primary Color</label>
+          <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Primary color</label>
           <Input name="primaryColor" value={formData.primaryColor || ""} onChange={handleChange} />
         </div>
         <div>
-          <label>Secondary Color</label>
+          <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Secondary color</label>
           <Input name="secondaryColor" value={formData.secondaryColor || ""} onChange={handleChange} />
         </div>
         <div>
-          <label>Background Gradient</label>
+          <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Background gradient</label>
           <Input name="backgroundGradient" value={formData.backgroundGradient || ""} onChange={handleChange} />
         </div>
         <div>
-          <label>Font Family</label>
+          <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Font family</label>
           <Input name="fontFamily" value={formData.fontFamily || ""} onChange={handleChange} />
         </div>
-        <Button type="submit">Update Theme</Button>
+        <div className="flex justify-end">
+          <Button type="submit">Update theme</Button>
+        </div>
       </form>
     </div>
   );

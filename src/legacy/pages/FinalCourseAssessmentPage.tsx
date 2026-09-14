@@ -92,46 +92,71 @@ const FinalCourseAssessmentPage: React.FC = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-gray-50 flex items-center justify-center p-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      className="min-h-screen bg-slate-50 px-6 py-16 text-slate-950 dark:bg-slate-950 dark:text-slate-50"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35 }}
     >
-      <div className="bg-white p-8 rounded-lg shadow-md max-w-xl w-full">
-        <h2 className="text-2xl font-bold mb-4">{assessment?.title || "Final Course Assessment"}</h2>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        {loading && <p className="text-gray-500">Loading final assessment…</p>}
+      <div className="mx-auto w-full max-w-3xl">
+        <div className="mb-8">
+          <p className="text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Final assessment</p>
+          <h1 className="mt-2 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">{assessment?.title || "Final Course Assessment"}</h1>
+          <p className="mt-3 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Complete the course assessment to demonstrate what you have learned.</p>
+        </div>
+
+        <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+        {error && <p className="mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{error}</p>}
+        {loading && <p className="py-12 text-center text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Loading assessment...</p>}
         {!loading && assessment && assessment.unlocked !== false && assessment.questions.length > 0 ? (
           <>
+            <div className="mb-8" aria-label="Assessment progress">
+              <div className="flex items-center justify-between text-sm font-medium leading-5 text-slate-600 dark:text-slate-400">
+                <span>{selectedAnswers.filter(Boolean).length} of {assessment.questions.length} answered</span>
+                <span className="text-indigo-600 dark:text-indigo-400">{Math.round((selectedAnswers.filter(Boolean).length / assessment.questions.length) * 100)}%</span>
+              </div>
+              <div className="mt-2 h-3 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800" role="progressbar" aria-valuemin={0} aria-valuemax={assessment.questions.length} aria-valuenow={selectedAnswers.filter(Boolean).length} aria-label="Questions answered">
+                <div className="h-full rounded-full bg-indigo-600 transition-[width] duration-300 dark:bg-indigo-400" style={{ width: `${(selectedAnswers.filter(Boolean).length / assessment.questions.length) * 100}%` }} />
+              </div>
+            </div>
+
+            <div className="space-y-6">
             {assessment.questions.map((q, idx) => (
-              <div key={idx} className="mb-4 border p-4 rounded">
-                <p className="font-semibold">{q.text}</p>
-                <div className="flex flex-wrap gap-2 mt-2">
+              <fieldset key={idx} className="rounded-xl border border-slate-200 p-6 dark:border-slate-800">
+                <legend className="px-2 text-xs font-medium uppercase leading-4 tracking-[0.12em] text-indigo-600 dark:text-indigo-400">Question {idx + 1}</legend>
+                <p className="text-base font-semibold leading-6 text-slate-950 dark:text-slate-50">{q.text}</p>
+                <div className="mt-4 grid gap-3">
                   {(q.options || []).map((option) => (
                     <button
                       key={option}
                       onClick={() => handleAnswerSelect(idx, option)}
-                      className={`px-3 py-1 border rounded ${
-                        selectedAnswers[idx] === option ? "bg-blue-200" : ""
+                      type="button"
+                      className={`w-full rounded-lg border px-4 py-3 text-left text-sm font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+                        selectedAnswers[idx] === option
+                          ? "border-indigo-600 bg-indigo-50 text-indigo-700 ring-2 ring-indigo-500 dark:bg-indigo-500/10 dark:text-indigo-300"
+                          : "border-slate-300 bg-white text-slate-700 hover:border-indigo-400 hover:bg-indigo-50/50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-indigo-700 dark:hover:bg-indigo-500/10"
                       }`}
                     >
                       {option}
                     </button>
                   ))}
                 </div>
-              </div>
+              </fieldset>
             ))}
+            </div>
             <button
               onClick={handleSubmitFinalAssessment}
-              className="w-full px-4 py-2 bg-green-600 text-white rounded disabled:opacity-50"
+              type="button"
+              className="mt-8 h-11 w-full rounded-lg bg-indigo-600 px-6 text-sm font-medium leading-5 text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-offset-slate-900"
               disabled={selectedAnswers.includes("") || submitting}
             >
-              {submitting ? "Submitting…" : "Submit Final Assessment"}
+              {submitting ? "Submitting..." : selectedAnswers.includes("") ? "Answer all questions to submit" : "Submit final assessment"}
             </button>
-            {score !== null && <p className="mt-4">Your score: {score}%</p>}
+            {score !== null && <p className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium leading-5 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200">Your score: {score}%</p>}
           </>
         ) : (
-          !loading && !error && <p>No final assessment available.</p>
+          !loading && !error && <div className="py-12 text-center"><h2 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">No final assessment available</h2><p className="mt-2 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">There is no final assessment configured for this course.</p></div>
         )}
+        </div>
       </div>
     </motion.div>
   );

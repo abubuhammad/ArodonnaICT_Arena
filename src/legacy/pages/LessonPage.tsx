@@ -587,15 +587,15 @@ const LessonPage: React.FC = () => {
 
   // Add this component for the sidebar
   const ModuleSidebar = () => (
-    <div className="bg-white rounded-xl shadow-md p-6">
-      <h3 className="text-lg font-semibold mb-4">Course Modules</h3>
-      <div className="space-y-4">
+    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+      <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Course modules</h3>
+      <div className="mt-6 space-y-6">
         {course?.modules.map((module: Module, moduleIndex: number) => (
-          <div key={module._id} className="border rounded-lg overflow-hidden">
-            <div className={`p-3 ${module._id === moduleId ? 'bg-purple-50' : ''}`}>
-              <h4 className="font-medium">{module.title}</h4>
+          <div key={module._id} className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800">
+            <div className={`p-3 ${module._id === moduleId ? 'bg-indigo-50 dark:bg-indigo-500/10' : 'bg-slate-50 dark:bg-slate-950'}`}>
+              <h4 className="text-sm font-semibold leading-5 text-slate-950 dark:text-slate-50">{module.title}</h4>
             </div>
-            <div className="divide-y">
+            <div className="divide-y divide-slate-200 dark:divide-slate-800">
               {module.lessons.map((lesson: Lesson, index: number) => {
                 const isCompleted = isLessonCompleted(module._id, index);
                 const isUnlocked = isModuleUnlocked(moduleIndex) && 
@@ -606,26 +606,26 @@ const LessonPage: React.FC = () => {
                 return (
                   <div
                     key={`${module._id}-${index}`}
-                    className={`p-3 flex items-center justify-between ${
-                      isCurrent ? 'bg-purple-100' : ''
+                    className={`flex items-center justify-between gap-3 p-3 ${
+                      isCurrent ? 'bg-indigo-50 dark:bg-indigo-500/10' : 'bg-white dark:bg-slate-900'
                     }`}
                   >
-                    <div className="flex items-center space-x-2">
+                    <div className="flex min-w-0 items-center gap-2">
                       {isCompleted ? (
-                        <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                        <CheckCircleIcon className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" />
                       ) : !isUnlocked ? (
-                        <LockClosedIcon className="w-5 h-5 text-gray-400" />
+                        <LockClosedIcon className="h-5 w-5 shrink-0 text-slate-400" />
                       ) : (
-                        <div className="w-5 h-5" />
+                        <div className="h-5 w-5 shrink-0" />
                       )}
-                      <span className={`${!isUnlocked ? 'text-gray-400' : ''}`}>
+                      <span className={`text-sm leading-5 ${!isUnlocked ? 'text-slate-400' : 'text-slate-700 dark:text-slate-300'}`}>
                         {lesson.title}
                       </span>
                     </div>
                     {isUnlocked && !isCurrent && (
                       <button
                         onClick={() => navigate(`/courses/${courseId}/modules/${module._id}/lessons/${index}`)}
-                        className="text-sm text-purple-600 hover:text-purple-800"
+                        className="shrink-0 text-xs font-medium leading-4 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400"
                       >
                         Go to
                       </button>
@@ -642,15 +642,16 @@ const LessonPage: React.FC = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-gray-50"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35 }}
       exit={{ opacity: 0 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="mx-auto w-full max-w-7xl px-6 py-16">
         <button
           onClick={goBack}
-          className="text-sm text-indigo-600 hover:text-indigo-700 flex items-center gap-2 mb-4"
+          className="mb-6 inline-flex items-center gap-2 text-sm font-medium leading-5 text-indigo-600 transition-colors hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-400"
         >
           ← Back
         </button>
@@ -663,7 +664,7 @@ const LessonPage: React.FC = () => {
         />
 
         {/* Main Content */}
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <ModuleSidebar />
@@ -672,23 +673,25 @@ const LessonPage: React.FC = () => {
           {/* Main Content */}
           <div className="lg:col-span-3">
           <motion.div
-              className="bg-white rounded-xl shadow-md p-6"
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
+              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35 }}
           >
             {currentLesson?.videoUrl && (
-              <div className="aspect-w-16 aspect-h-9 mb-6">
+              <div className="mb-8 aspect-video overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-sm dark:border-slate-800">
                 <iframe
                   src={currentLesson.videoUrl}
-                  title="Lesson Video"
-                  className="w-full h-full rounded-lg"
+                  title={`${currentLesson.title} video`}
+                  className="h-full w-full"
+                  loading="lazy"
                   allowFullScreen
                 />
               </div>
             )}
 
-            <div className="prose max-w-none">
-              <h1 className="text-2xl font-bold mb-4">
+            <div className="prose prose-slate max-w-none dark:prose-invert">
+              <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">
                 {currentLesson?.title}
               </h1>
               <div
@@ -702,41 +705,41 @@ const LessonPage: React.FC = () => {
                 server — the correct answer is never present in this payload,
                 and grading always happens server-side in submitQuizAnswer. */}
             {currentLesson?.hasQuiz && (
-              <div className="quiz-section mt-8 p-4 border rounded">
-                <h3 className="text-xl font-bold mb-2">{lessonQuiz?.title || 'Quick Quiz'}</h3>
-                {quizLoading && <p className="text-gray-500">Loading quiz…</p>}
+              <div className="quiz-section mt-8 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
+                <h3 className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">{lessonQuiz?.title || 'Quick Quiz'}</h3>
+                {quizLoading && <p className="mt-3 text-sm font-normal leading-5 text-slate-500 dark:text-slate-400">Loading quiz...</p>}
                 {!quizLoading && !lessonQuiz && (
-                  <p className="text-red-600">{quizError || 'This quiz could not be loaded.'}</p>
+                  <p className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{quizError || 'This quiz could not be loaded.'}</p>
                 )}
                 {!quizLoading && lessonQuiz && lessonQuiz.questions[0] && (
                   <>
-                    <p className="mb-2">{lessonQuiz.questions[0].text}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <p className="mt-4 text-base font-normal leading-6 text-slate-700 dark:text-slate-300">{lessonQuiz.questions[0].text}</p>
+                    <div className="mt-4 flex flex-col gap-2">
                       {lessonQuiz.questions[0].options?.map((option) => (
                         <button
                           key={option}
                           onClick={() => handleAnswerSelect(option)}
                           disabled={quizAnswered && quizCorrect}
-                          className={`px-3 py-1 border rounded ${
-                            selectedAnswer === option ? "bg-blue-200" : ""
+                          className={`rounded-lg border px-3 py-2 text-left text-sm font-medium leading-5 transition-colors ${
+                            selectedAnswer === option ? "border-indigo-600 bg-indigo-50 text-indigo-700 ring-2 ring-indigo-500 dark:bg-indigo-500/10 dark:text-indigo-300" : "border-slate-300 bg-white text-slate-700 hover:border-indigo-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
                           }`}
                         >
                           {option}
                         </button>
                       ))}
                     </div>
-                    {quizError && <p className="text-red-600 mt-2">{quizError}</p>}
+                    {quizError && <p className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">{quizError}</p>}
                     {!(quizAnswered && quizCorrect) && (
                       <button
                         onClick={submitQuizAnswer}
-                        className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded disabled:opacity-50"
+                        className="mt-4 h-10 rounded-lg bg-indigo-600 px-4 text-sm font-medium leading-5 text-white transition-colors hover:bg-indigo-700 disabled:pointer-events-none disabled:opacity-50"
                         disabled={!selectedAnswer || quizSubmitting}
                       >
-                        {quizSubmitting ? 'Submitting…' : 'Submit Answer'}
+                        {quizSubmitting ? 'Submitting...' : 'Submit answer'}
                       </button>
                     )}
                     {quizAnswered && quizCorrect && (
-                      <p className="mt-4 text-green-700 font-medium">✓ Passed — moving on…</p>
+                      <p className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-medium leading-5 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-950/30 dark:text-emerald-200">Passed - moving on...</p>
                     )}
                   </>
                 )}
@@ -745,24 +748,24 @@ const LessonPage: React.FC = () => {
 
               {/* Non-quiz lessons: explicit mark-complete button */}
               {!currentLesson?.hasQuiz && (
-                <div className="mt-4">
+                <div className="mt-8 border-t border-slate-200 pt-6 dark:border-slate-800">
                   {!isLessonCompleted(currentModule?._id || '', parseInt(lessonIndex || '0', 10)) && (
                     <button
                       onClick={markLessonComplete}
                       disabled={isCompletingLesson || !currentModule || !currentLesson}
-                      className="px-4 py-2 bg-green-600 text-white rounded disabled:opacity-50"
+                      className="h-10 rounded-lg bg-indigo-600 px-4 text-sm font-medium leading-5 text-white transition-colors hover:bg-indigo-700 disabled:pointer-events-none disabled:opacity-50"
                     >
-                      {isCompletingLesson ? 'Completing...' : 'Mark as Complete'}
+                      {isCompletingLesson ? 'Completing...' : 'Mark as complete'}
                     </button>
                   )}
                 </div>
               )}
 
             {/* Lesson Navigation */}
-            <div className="mt-8 flex justify-between items-center">
+            <div className="mt-8 flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between dark:border-slate-800">
               <button
                 onClick={() => navigateToLesson("prev")}
-                  className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-slate-300 px-3 text-sm font-medium leading-5 text-slate-700 transition-colors hover:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
                   disabled={!course || !currentModule || (course.modules.findIndex((m: Module) => m._id === moduleId) === 0 && parseInt(lessonIndex || "0", 10) === 0)}
               >
                 <ChevronLeftIcon className="w-5 h-5" />
@@ -771,7 +774,7 @@ const LessonPage: React.FC = () => {
 
               <button
                 onClick={() => navigateToLesson("next")}
-                  className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 text-sm font-medium leading-5 text-white transition-colors hover:bg-indigo-700 disabled:pointer-events-none disabled:opacity-50"
                   disabled={!course || !currentModule || (course.modules.findIndex((m: Module) => m._id === moduleId) === course.modules.length - 1 && parseInt(lessonIndex || "0", 10) === currentModule.lessons.length - 1)}
               >
                 <span>Next Lesson</span>

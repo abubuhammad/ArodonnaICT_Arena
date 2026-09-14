@@ -42,37 +42,38 @@ const AdminLogin: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-4">
+    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-6 py-16 dark:bg-slate-950">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md"
+        className="w-full max-w-md rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Admin Login</h2>
+        <p className="text-center text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">Admin access</p>
+        <h1 className="mt-2 text-center text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">Admin login</h1>
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm leading-5 text-red-800 dark:border-red-500/30 dark:bg-red-950/30 dark:text-red-200" role="alert">
             {error}
           </div>
         )}
-        <form onSubmit={handleLogin} className="space-y-6">
+        <form onSubmit={handleLogin} className="mt-8 space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Admin Email</label>
+            <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Admin email</label>
             <input
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-950 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-50"
               placeholder="Enter admin email"
               required
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <label className="mb-2 block text-sm font-medium leading-5 text-slate-700 dark:text-slate-300">Password</label>
             <input
               type="password"
               value={formData.password}
               onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-              className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-950 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-50"
               placeholder="Enter password"
               required
             />
@@ -80,7 +81,7 @@ const AdminLogin: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors disabled:opacity-50"
+            className="h-11 w-full rounded-lg bg-indigo-600 text-sm font-medium leading-5 text-white transition-colors hover:bg-indigo-700 disabled:pointer-events-none disabled:opacity-50"
           >
             {loading ? "Signing in..." : "Login as Admin"}
           </button>

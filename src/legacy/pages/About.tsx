@@ -29,13 +29,13 @@ const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-      <div className="max-w-7xl mx-auto w-full px-4 pt-4">
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-6">
         <button
           onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/"))}
-          className="text-sm text-indigo-600 hover:text-indigo-700 flex items-center gap-2"
+          className="inline-flex items-center gap-2 text-sm font-medium leading-5 text-indigo-600 transition-colors hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
         >
-          ← Back
+          Back
         </button>
       </div>
       <Navigation
@@ -44,34 +44,40 @@ const AboutPage: React.FC = () => {
         onDashboardNavigation={handleDashboardNavigation}
       />
 
-      <main className="py-16 flex-grow">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.header initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-12">
-            <h1 className="text-5xl font-bold mb-4">About Arodonna ICT Arena</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Empowering learners worldwide with practical tech education and meaningful career outcomes.</p>
+      <main className="flex-grow py-16">
+        <div className="mx-auto w-full max-w-7xl space-y-8 px-6">
+          <motion.header
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35 }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <p className="mb-3 text-xs font-medium uppercase leading-4 tracking-[0.18em] text-cyan-600 dark:text-cyan-400">A practical path forward</p>
+            <h1 className="text-4xl font-bold leading-tight text-slate-950 dark:text-slate-50">About Arodonna ICT Arena</h1>
+            <p className="mt-4 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Empowering learners worldwide with practical tech education and meaningful career outcomes.</p>
           </motion.header>
 
-          <section aria-labelledby="mission" className="space-y-8 mb-10">
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow">
-              <h2 id="mission" className="text-3xl font-bold text-indigo-600 mb-3">Our Mission</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">We provide practical, industry-aligned tech education that helps learners build skills employers need. Our goal is to make that education accessible, affordable, and relevant.</p>
+          <section aria-labelledby="mission" className="space-y-8">
+            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <h2 id="mission" className="text-2xl font-bold leading-8 text-indigo-600 dark:text-indigo-400">Our Mission</h2>
+              <p className="mt-3 max-w-3xl text-base font-normal leading-6 text-slate-600 dark:text-slate-400">We provide practical, industry-aligned tech education that helps learners build skills employers need. Our goal is to make that education accessible, affordable, and relevant.</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow">
-                <h3 className="text-2xl font-semibold text-indigo-600 mb-2">Our Vision</h3>
-                <p className="text-gray-700 dark:text-gray-300">To be the go-to platform for learners and instructors who want measurable career impact through practical learning experiences.</p>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Our Vision</h3>
+                <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">To be the go-to platform for learners and instructors who want measurable career impact through practical learning experiences.</p>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow">
-                <h3 className="text-2xl font-semibold text-indigo-600 mb-2">Who We Serve</h3>
-                <p className="text-gray-700 dark:text-gray-300">Students seeking career transitions, self-learners looking to upskill, and instructors aiming to reach a global audience.</p>
+              <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                <h3 className="text-lg font-semibold leading-7 text-slate-950 dark:text-slate-50">Who We Serve</h3>
+                <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">Students seeking career transitions, self-learners looking to upskill, and instructors aiming to reach a global audience.</p>
               </div>
             </div>
           </section>
 
-          <section aria-labelledby="values" className="mb-12">
-            <h2 id="values" className="text-3xl font-bold mb-6">Our Core Values</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+          <section aria-labelledby="values">
+            <h2 id="values" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Our Core Values</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 { title: 'Excellence', text: 'High-quality content and instructors.' },
                 { title: 'Accessibility', text: 'Affordable education for every learner.' },
@@ -80,32 +86,32 @@ const AboutPage: React.FC = () => {
                 { title: 'Integrity', text: 'Transparent and fair policies.' },
                 { title: 'Empowerment', text: 'Tools that help learners succeed.' },
               ].map((v, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-indigo-600 mb-2">{v.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">{v.text}</p>
+                <motion.div key={v.title} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05, duration: 0.35 }} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                  <h3 className="text-lg font-semibold leading-7 text-indigo-600 dark:text-indigo-400">{v.title}</h3>
+                  <p className="mt-2 text-base font-normal leading-6 text-slate-600 dark:text-slate-400">{v.text}</p>
                 </motion.div>
               ))}
             </div>
           </section>
 
-          <section aria-labelledby="why" className="mb-12">
-            <h2 id="why" className="text-3xl font-bold mb-6">Why Choose Us</h2>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-2xl p-8">
-              <ul className="grid md:grid-cols-2 gap-4">
-                <li className="flex items-start gap-3"><span className="text-indigo-600 font-bold">✓</span><span>Expert instructors with real-world experience</span></li>
-                <li className="flex items-start gap-3"><span className="text-indigo-600 font-bold">✓</span><span>Hands-on projects and portfolios</span></li>
-                <li className="flex items-start gap-3"><span className="text-indigo-600 font-bold">✓</span><span>Certificates and career support</span></li>
-                <li className="flex items-start gap-3"><span className="text-indigo-600 font-bold">✓</span><span>Flexible learning and lifetime access</span></li>
+          <section aria-labelledby="why">
+            <h2 id="why" className="mb-6 text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Why Choose Us</h2>
+            <div className="rounded-xl border border-cyan-200 bg-cyan-50/70 p-6 dark:border-cyan-900/60 dark:bg-cyan-950/20">
+              <ul className="grid gap-6 md:grid-cols-2">
+                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Expert instructors with real-world experience</span></li>
+                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Hands-on projects and portfolios</span></li>
+                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Certificates and career support</span></li>
+                <li className="flex items-start gap-3 text-base font-normal leading-6 text-slate-700 dark:text-slate-300"><span className="font-bold text-indigo-600 dark:text-indigo-400">✓</span><span>Flexible learning and lifetime access</span></li>
               </ul>
             </div>
           </section>
 
-          <section aria-labelledby="cta" className="text-center">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-              <h3 id="cta" className="text-2xl font-bold mb-4">Ready to get started?</h3>
-              <div className="flex justify-center gap-4">
-                <Button onClick={() => navigate('/courses')} className="bg-indigo-600 text-white px-6 py-3">Browse Courses</Button>
-                <Button variant="outline" onClick={() => navigate('/signup')} className="px-6 py-3">Create Account</Button>
+          <section aria-labelledby="cta" className="border-t border-slate-200 pt-8 text-center dark:border-slate-800">
+            <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+              <h3 id="cta" className="text-2xl font-bold leading-8 text-slate-950 dark:text-slate-50">Ready to get started?</h3>
+              <div className="mt-4 flex flex-col justify-center gap-3 sm:flex-row">
+                <Button size="lg" onClick={() => navigate('/courses')}>Browse Courses</Button>
+                <Button size="lg" variant="outline" onClick={() => navigate('/signup')}>Create Account</Button>
               </div>
             </motion.div>
           </section>
