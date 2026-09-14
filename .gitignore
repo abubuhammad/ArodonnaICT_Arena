@@ -44,3 +44,8 @@ next-env.d.ts
 backend.legacy/node_modules/
 frontend.legacy/node_modules/
 backend.legacy/public/uploads/
+
+# legacy folders while Windows rename is pending
+backend/node_modules/
+backend/public/uploads/
+backend/server.log
