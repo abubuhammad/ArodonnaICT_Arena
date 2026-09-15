@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { authenticateUser } from '@/lib/auth';
-import { getSupabaseStorageClient, STORAGE_BUCKET } from '@/lib/supabase';
+import { ensureSupabaseStorageBucket, getSupabaseStorageClient, STORAGE_BUCKET } from '@/lib/supabase';
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
     }
 
+    await ensureSupabaseStorageBucket();
     const client = getSupabaseStorageClient();
     const fileName = `${Date.now()}-${Math.random().toString(36).slice(2)}-${file.name.replace(/[^a-zA-Z0-9._-]/g, '-')}`;
     const arrayBuffer = await file.arrayBuffer();
@@ -33,7 +34,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ imageUrl: data.publicUrl });
   } catch (error) {
     if (error instanceof Error && 'status' in error) {
-      return NextResponse.json({ error: error.message }, { status: Number((error as any).status) || 401 });
+      return NextResponse.json({ error: error.message }, { status: Number(error.status) || 401 });
     }
 
     console.error('Thumbnail upload route error:', error);
