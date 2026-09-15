@@ -12,6 +12,7 @@
       "framework": "express",
       "entrypoint": "api/index.ts",
       "installCommand": "npm install",
+      "buildCommand": "npm run prisma:generate && npm run typecheck",
       "routes": [
         {
           "src": "/api/backend/(.*)",
