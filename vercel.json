@@ -1,7 +1,45 @@
 {
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "frontend": {
+      "root": "./",
+      "framework": "nextjs",
+      "buildCommand": "npm run build",
+      "installCommand": "npm install"
+    },
+    "backend": {
+      "root": "./backend",
+      "framework": "express",
+      "entrypoint": "api/index.ts",
+      "installCommand": "npm install",
+      "routes": [
+        {
+          "src": "/api/backend/(.*)",
+          "transforms": [
+            {
+              "type": "request.path",
+              "op": "set",
+              "args": "/api/$1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/backend/:path*",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "frontend"
+      }
+    }
+  ],
   "crons": [
     {
       "path": "/api/cron/auto-publish",
