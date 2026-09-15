@@ -44,7 +44,50 @@ export async function verifyPayment(id: string, verified: boolean) { const enrol
 export async function verifyEnrollmentPayment(id: string, verified: boolean) { const enrollment = await prisma.enrollment.update({ where: { id }, data: { paymentStatus: verified ? 'PAID' : 'NOT_PAID', status: 'ENROLLED' } }); return { message: 'Payment status updated', enrollment }; }
 
 export async function approveInstructor(id: string) { const user = await prisma.user.findUnique({ where: { id } }); if (!user) throw Object.assign(new Error('User not found'), { status: 404 }); if (user.role !== 'PENDING') throw Object.assign(new Error('User is not pending instructor approval'), { status: 400 }); const updated = await prisma.user.update({ where: { id }, data: { role: 'INSTRUCTOR' } }); return { message: 'Instructor approved successfully', user: updated }; }
-export async function deleteUser(id: string, actor: any, request: Request) { const user = await prisma.user.findUnique({ where: { id } }); if (!user) throw Object.assign(new Error('User not found'), { status: 404 }); await prisma.user.delete({ where: { id } }); await prisma.auditLog.create({ data: { actorId: actor.id, actorRole: actor.role, actionType: 'DELETE_USER', resourceType: 'User', resourceId: user.id, details: { email: user.email, name: user.name }, ipAddress: ipOf(request) } }); return { message: 'User deleted successfully' }; }
+export async function deleteUser(id: string, actor: any, request: Request) {
+  const user = await prisma.user.findUnique({ where: { id } });
+  if (!user) throw Object.assign(new Error('User not found'), { status: 404 });
+
+  await prisma.$transaction(async (tx) => {
+    const [enrollments, courses] = await Promise.all([
+      tx.enrollment.findMany({ where: { userId: id }, select: { id: true } }),
+      tx.course.findMany({ where: { instructorId: id }, select: { id: true } }),
+    ]);
+    const enrollmentIds = enrollments.map((enrollment) => enrollment.id);
+    const courseIds = courses.map((course) => course.id);
+    const moduleIds = courseIds.length
+      ? (await tx.module.findMany({ where: { courseId: { in: courseIds } }, select: { id: true } })).map((module) => module.id)
+      : [];
+    const lessonIds = moduleIds.length
+      ? (await tx.lesson.findMany({ where: { moduleId: { in: moduleIds } }, select: { id: true } })).map((lesson) => lesson.id)
+      : [];
+    const quizIds = lessonIds.length
+      ? (await tx.quiz.findMany({ where: { lessonId: { in: lessonIds } }, select: { id: true } })).map((quiz) => quiz.id)
+      : [];
+    const quizAttemptFilters = [
+      { userId: id },
+      { gradedById: id },
+      ...(enrollmentIds.length ? [{ enrollmentId: { in: enrollmentIds } }] : []),
+      ...(quizIds.length ? [{ quizId: { in: quizIds } }] : []),
+    ];
+
+    await tx.quizAttempt.deleteMany({ where: { OR: quizAttemptFilters } });
+    if (enrollmentIds.length) {
+      await tx.certificate.deleteMany({ where: { enrollmentId: { in: enrollmentIds } } });
+      await tx.courseProgress.deleteMany({ where: { enrollmentId: { in: enrollmentIds } } });
+      await tx.enrollment.deleteMany({ where: { id: { in: enrollmentIds } } });
+    }
+    if (quizIds.length) await tx.quiz.deleteMany({ where: { id: { in: quizIds } } });
+    if (lessonIds.length) await tx.lesson.deleteMany({ where: { id: { in: lessonIds } } });
+    if (moduleIds.length) await tx.module.deleteMany({ where: { id: { in: moduleIds } } });
+    if (courseIds.length) await tx.course.deleteMany({ where: { id: { in: courseIds } } });
+
+    await tx.user.delete({ where: { id } });
+  });
+
+  await prisma.auditLog.create({ data: { actorId: actor.id, actorRole: actor.role, actionType: 'DELETE_USER', resourceType: 'User', resourceId: user.id, details: { email: user.email, name: user.name }, ipAddress: ipOf(request) } });
+  return { message: 'User deleted successfully' };
+}
 
 export async function getLearnerProfile(userId: string) { const user = await prisma.user.findUnique({ where: { id: userId }, select: { id: true, name: true, email: true, role: true, createdAt: true } }); if (!user) throw Object.assign(new Error('User not found'), { status: 404 }); const enrollments = await prisma.enrollment.findMany({ where: { userId: user.id }, include: { course: { select: { title: true } } } }); const completed = enrollments.filter((item) => item.status === 'COMPLETED'); return { _id: user.id, ...user, enrollments: enrollments.map((item) => ({ _id: item.id, courseId: item.courseId, courseName: item.course.title, status: item.status, progress: item.progressPercentage, enrolledAt: item.enrolledAt, certificate: item.certificate })), totalEnrollments: enrollments.length, completedCourses: completed.length, certificatesIssued: completed.filter((item) => item.certificate).length, averageProgress: enrollments.length ? Math.round(enrollments.reduce((sum, item) => sum + item.progressPercentage, 0) / enrollments.length) : 0 }; }
 
